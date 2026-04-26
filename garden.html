@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Garden Pack - Blacket Values</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="/static/style.css?v=20260125">
+  <link rel="stylesheet" href="/static/blook.css?v=20260125">
+  <style>
+    .blook-card {
+      background: var(--panel-bg);
+      border-radius: 10px;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease, border-color 0.28s ease;
+      border: 3px solid rgba(255,255,255,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .blook-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      border-color: rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.5);
+    }
+    .blook-media {
+      position: relative;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    }
+    .blook-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #111;
+      color: #fff;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+      padding: 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.04);
+      text-transform: uppercase;
+      z-index: 5;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+    .blook-badge.up { background: #10b981; }
+    .blook-badge.down { background: #ef4444; }
+    .blook-badge.stable { background: #6b7280; }
+    .blook-top-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 5;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .blook-rap {
+      background: rgba(255,255,255,0.03);
+      color: #dcdcdc;
+      font-size: 12px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.02);
+    }
+    .blook-image {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      display: block;
+      z-index: 2;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.7));
+    }
+    .blook-body {
+      padding: 12px 14px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .blook-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .blook-rarity {
+      font-size: 12px;
+      color: var(--rarity-color, #888);
+      font-weight: 600;
+      background: rgba(255,255,255,0.02);
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: -4px;
+      position: relative;
+    }
+    .blook-rarity.rgb-text-glow {
+      background-image: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: rgbSmooth 10s linear infinite;
+      z-index: 1;
+    }
+    .blook-rarity.rgb-text-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.02);
+      border-radius: 8px;
+      z-index: -1;
+    }
+    .blook-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12px;
+      color: #cfcfcf;
+    }
+    .blook-stats > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .add-to-inventory, button.add-to-inventory, a.add-to-inventory {
+      display: none !important;
+    }
+    @media (max-width: 640px) {
+      .blook-card { width: 60%; }
+      .blook-image { width: 100px; height: 100px; }
+    }
+    .blook-search {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin: 16px 0;
+    }
+    #blook-filter {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--panel-bg);
+      color: #fff;
+      outline: none;
+      min-height: 50px;
+    }
+    #blook-filter::placeholder { color: #bdbdbd; }
+    #blook-clear {
+      background: transparent;
+      border: none;
+      color: #ddd;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 8px;
+    }
+    #blook-clear:focus { box-shadow: 0 0 0 3px rgba(0,150,255,0.12); }
+    .visually-hidden { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    .blook-hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="current-pack-header" style="--pack-color1: #0096ff">
+      <h1>Garden</h1>
+      
+      <div class="pack-price">30 tokens</div>
+      
+      <div style="margin-top:12px;">
+        <a class="back-button" href="/">← Back to Packs</a>
+        <a class="action-btn" href="/blooks">All Blooks</a>
+        <a class="action-btn" href="/credits">Credits</a>
+        <a class="action-btn" href="/search">Search</a>
+        <a class="action-btn" href="https://discord.gg/v7vFJJ7wqZ" target="_blank">Discord</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="blook-search">
+        <label for="blook-filter" class="visually-hidden">Search blooks</label>
+        <input id="blook-filter" type="search" placeholder="Search blooks by name or rarity…" aria-label="Search blooks">
+        <button id="blook-clear" type="button" aria-label="Clear search">✕</button>
+      </div>
+
+      <section class="blooks-grid" aria-label="Blooks in pack">
+        
+        
+          
+          <article class="blook-card" 
+                   data-blook-name="Watering Can"
+                   style="--rarity-color: #29e629">
+            <a href="/blook/Watering%20Can" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Watering Can.png" 
+                     alt="Watering Can" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Watering Can</div>
+
+                
+                  <div class="blook-rarity ">
+                    Uncommon
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>15%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Red Robin"
+                   style="--rarity-color: #29e629">
+            <a href="/blook/Red%20Robin" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Red Robin newer.png" 
+                     alt="Red Robin" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Red Robin</div>
+
+                
+                  <div class="blook-rarity ">
+                    Uncommon
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>15%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Potted Sunflower"
+                   style="--rarity-color: #29e629">
+            <a href="/blook/Potted%20Sunflower" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Potted Sunflower.png" 
+                     alt="Potted Sunflower" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Potted Sunflower</div>
+
+                
+                  <div class="blook-rarity ">
+                    Uncommon
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>15%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Bag of Seeds"
+                   style="--rarity-color: #29e629">
+            <a href="/blook/Bag%20of%20Seeds" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Bag of Seeds.png" 
+                     alt="Bag of Seeds" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Bag of Seeds</div>
+
+                
+                  <div class="blook-rarity ">
+                    Uncommon
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>15%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Sprinkler"
+                   style="--rarity-color: #0000ff">
+            <a href="/blook/Sprinkler" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Sprinkler.png" 
+                     alt="Sprinkler" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Sprinkler</div>
+
+                
+                  <div class="blook-rarity ">
+                    Rare
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>7%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Pot of Honey"
+                   style="--rarity-color: #0000ff">
+            <a href="/blook/Pot%20of%20Honey" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Pot of Honey.png" 
+                     alt="Pot of Honey" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Pot of Honey</div>
+
+                
+                  <div class="blook-rarity ">
+                    Rare
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>7%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Fruit Tart"
+                   style="--rarity-color: #0000ff">
+            <a href="/blook/Fruit%20Tart" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Fruit Tart.png" 
+                     alt="Fruit Tart" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Fruit Tart</div>
+
+                
+                  <div class="blook-rarity ">
+                    Rare
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>7%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Spring Gnome"
+                   style="--rarity-color: #8000ff">
+            <a href="/blook/Spring%20Gnome" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Spring Gnome.png" 
+                     alt="Spring Gnome" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Spring Gnome</div>
+
+                
+                  <div class="blook-rarity ">
+                    Epic
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>3%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Faberge Egg"
+                   style="--rarity-color: #ffaf0f">
+            <a href="/blook/Faberge%20Egg" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Faberge Egg.png" 
+                     alt="Faberge Egg" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Faberge Egg</div>
+
+                
+                  <div class="blook-rarity ">
+                    Legendary
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>0.5%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Cookies and Cream Zoey"
+                   style="--rarity-color: #00ccff">
+            <a href="/blook/Cookies%20and%20Cream%20Zoey" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Cookies and Cream Zoey.png" 
+                     alt="Cookies and Cream Zoey" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Cookies and Cream Zoey</div>
+
+                
+                  <div class="blook-rarity ">
+                    Chroma
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>0.005%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Chocolate Zoey"
+                   style="--rarity-color: #00ccff">
+            <a href="/blook/Chocolate%20Zoey" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Chocolate Zoey.png" 
+                     alt="Chocolate Zoey" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Chocolate Zoey</div>
+
+                
+                  <div class="blook-rarity ">
+                    Chroma
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>0.005%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Mint Chocolate Zoey"
+                   style="--rarity-color: #00ccff">
+            <a href="/blook/Mint%20Chocolate%20Zoey" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Mint Chocolate Zoey.png" 
+                     alt="Mint Chocolate Zoey" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Mint Chocolate Zoey</div>
+
+                
+                  <div class="blook-rarity ">
+                    Chroma
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>0.005%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Spring Zoey"
+                   style="--rarity-color: #008080">
+            <a href="/blook/Spring%20Zoey" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Spring Zoey old.png" 
+                     alt="Spring Zoey" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Spring Zoey</div>
+
+                
+                  <div class="blook-rarity ">
+                    Unique
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>0.002%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+          <article class="blook-card" 
+                   data-blook-name="Pinwheel"
+                   style="--rarity-color: #ff75ff">
+            <a href="/blook/Pinwheel" style="color:inherit; text-decoration:none;">
+              <div class="blook-media">
+                <div class="blook-badge" data-trend>—</div>
+                <img class="blook-image" 
+                     src="/static/images/Pinwheel.gif" 
+                     alt="Pinwheel" 
+                     onerror="this.style.display='none'">
+                <div class="blook-top-right">
+                  <div class="blook-rap" data-rap>RAP: —</div>
+                </div>
+              </div>
+
+              <div class="blook-body">
+                <div class="blook-name">Pinwheel</div>
+
+                
+                  <div class="blook-rarity ">
+                    Mythical
+                  </div>
+                
+
+                <div class="blook-stats">
+                  <div>
+                    <span>Chance:</span>
+                    <span>0.001%</span>
+                  </div>
+                  <div data-value>
+                    <span>Value:</span>
+                    <span>—</span>
+                  </div>
+                  <div data-demand>
+                    <span>Demand:</span>
+                    <span>—</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          
+        
+      </section>
+    </main>
+  </div>
+
+  <script>
+  (function () {
+    const packName = "Garden";
+    const pricingUrl = '/api/pack/' + encodeURIComponent(packName) + '/pricing';
+
+    function fmt(n) {
+      if (n === null || n === undefined || isNaN(n)) return '—';
+      return Number(n).toLocaleString();
+    }
+
+    fetch(pricingUrl)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data || data.error) {
+          console.log('No pricing data available for pack');
+          return;
+        }
+
+        console.log('Pack pricing data:', data);
+
+        const pricingMap = {};
+        data.blooks.forEach(blook => {
+          pricingMap[blook.blook_name] = blook;
+        });
+
+        document.querySelectorAll('.blook-card').forEach(card => {
+          const blookName = card.dataset.blookName;
+          const pricing = pricingMap[blookName];
+
+          if (!pricing) return;
+
+          // Update RAP
+          const rapEl = card.querySelector('[data-rap]');
+          if (rapEl && pricing.rap) {
+            rapEl.textContent = 'RAP: ' + fmt(pricing.rap);
+          }
+
+          // Update trend badge
+          const trendEl = card.querySelector('[data-trend]');
+          if (trendEl && pricing.trend) {
+            trendEl.textContent = pricing.trend;
+            trendEl.className = 'blook-badge ' + pricing.trend.toLowerCase();
+          }
+
+          // Update value (use manual value if set, otherwise RAP)
+          const valueEl = card.querySelector('[data-value] span:last-child');
+          if (valueEl && pricing.value) {
+            valueEl.textContent = fmt(pricing.value);
+          }
+
+          // Update demand
+          const demandEl = card.querySelector('[data-demand] span:last-child');
+          if (demandEl && pricing.demand !== undefined) {
+            demandEl.textContent = pricing.demand;
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Error fetching pack pricing:', err);
+      });
+
+    // Filter functionality
+    const input = document.getElementById('blook-filter');
+    const clearBtn = document.getElementById('blook-clear');
+    const grid = document.querySelector('.blooks-grid');
+
+    if (input && grid) {
+      function getCards() {
+        return Array.from(grid.querySelectorAll('.blook-card'));
+      }
+
+      function normalize(s) {
+        return (s || '').toString().trim().toLowerCase();
+      }
+
+      function filterCards(query) {
+        const q = normalize(query);
+        const cards = getCards();
+
+        if (!q) {
+          cards.forEach(c => c.classList.remove('blook-hidden'));
+          return;
+        }
+
+        cards.forEach(card => {
+          const name = card.querySelector('.blook-name')?.textContent.trim().toLowerCase() || '';
+          const rarity = card.querySelector('.blook-rarity')?.textContent.trim().toLowerCase() || '';
+          const matches = name.includes(q) || rarity.includes(q);
+          card.classList.toggle('blook-hidden', !matches);
+        });
+      }
+
+      function debounce(fn, wait = 160) {
+        let t;
+        return (...args) => {
+          clearTimeout(t);
+          t = setTimeout(() => fn(...args), wait);
+        };
+      }
+
+      const debounced = debounce(e => filterCards(e.target.value), 120);
+
+      input.addEventListener('input', debounced);
+
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        filterCards('');
+        input.focus();
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          input.value = '';
+          filterCards('');
+        }
+      });
+
+      filterCards(input.value);
+    }
+
+    // Link click handler
+    document.querySelectorAll('.blook-card a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        if (e.ctrlKey || e.metaKey || this.target === '_blank') return;
+        e.preventDefault();
+        window.location.href = this.href;
+      });
+    });
+  })();
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4ed4ab9c57eb427eb03dfdafe0ff6fae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

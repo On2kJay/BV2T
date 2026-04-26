@@ -1,0 +1,3828 @@
+{
+  "Garden": {
+    "p": 30,
+    "b": [
+      {
+        "n": "Watering Can",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Watering Can.png",
+        "c": 15
+      },
+      {
+        "n": "Red Robin",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Red Robin newer.png",
+        "c": 15
+      },
+      {
+        "n": "Potted Sunflower",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Potted Sunflower.png",
+        "c": 15
+      },
+      {
+        "n": "Bag of Seeds",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Bag of Seeds.png",
+        "c": 15
+      },
+      {
+        "n": "Sprinkler",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Sprinkler.png",
+        "c": 7
+      },
+      {
+        "n": "Pot of Honey",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Pot of Honey.png",
+        "c": 7
+      },
+      {
+        "n": "Fruit Tart",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Fruit Tart.png",
+        "c": 7
+      },
+      {
+        "n": "Spring Gnome",
+        "r": "Epic",
+        "m": "https://www.blacketvalues.com/static/images/Spring Gnome.png",
+        "c": 3
+      },
+      {
+        "n": "Faberge Egg",
+        "r": "Legendary",
+        "m": "https://www.blacketvalues.com/static/images/Faberge Egg.png",
+        "c": 0.5
+      },
+      {
+        "n": "Cookies and Cream Zoey",
+        "r": "Chroma",
+        "m": "https://www.blacketvalues.com/static/images/Cookies and Cream Zoey.png",
+        "c": 0.005
+      },
+      {
+        "n": "Chocolate Zoey",
+        "r": "Chroma",
+        "m": "https://www.blacketvalues.com/static/images/Chocolate Zoey.png",
+        "c": 0.005
+      },
+      {
+        "n": "Mint Chocolate Zoey",
+        "r": "Chroma",
+        "m": "https://www.blacketvalues.com/static/images/Mint Chocolate Zoey.png",
+        "c": 0.005
+      },
+      {
+        "n": "Spring Zoey",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Spring Zoey old.png",
+        "c": 0.002
+      },
+      {
+        "n": "Pinwheel",
+        "r": "Mythical",
+        "m": "https://www.blacketvalues.com/static/images/Pinwheel.gif",
+        "c": 0.001
+      }
+    ]
+  },
+  "Bot": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Lil Bot",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lil Bot.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Lovely Bot",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lovely Bot.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Angry Bot",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Angry Bot.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Happy Bot",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Happy Bot.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Watson",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Watson.webp",
+        "c": 10
+      },
+      {
+        "n": "Buddy Bot",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Buddy Bot.webp",
+        "c": 10
+      },
+      {
+        "n": "Brainy Bot",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Brainy Bot.webp",
+        "c": 3.7
+      },
+      {
+        "n": "Mega Bot",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Mega Bot.webp",
+        "c": 0.3
+      },
+      {
+        "n": "Catson",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Catson.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Forgotten Bot",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Forgotten Bot.webp",
+        "c": 0.004
+      }
+    ]
+  },
+  "Bug": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Ant",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Ant.webp",
+        "c": 20
+      },
+      {
+        "n": "Rhino Beetle",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Rhinobeetle.webp",
+        "c": 20
+      },
+      {
+        "n": "Ladybug",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Ladybug.webp",
+        "c": 20
+      },
+      {
+        "n": "Fly",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Fly.webp",
+        "c": 20
+      },
+      {
+        "n": "Worm",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Worm.webp",
+        "c": 9
+      },
+      {
+        "n": "Bee",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Bee.webp",
+        "c": 9
+      },
+      {
+        "n": "Mantis",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Mantis.webp",
+        "c": 3
+      },
+      {
+        "n": "Butterfly",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Butterfly.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Blue Butterfly",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blue Butterfly.webp",
+        "c": 0.03
+      }
+    ]
+  },
+  "Dino": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Amber",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Amber.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Dino Egg",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Dino Egg.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Dino Fossil",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Dino Fossil.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Stegosaurus",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Stegosaurus.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Velociraptor",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Velociraptor.webp",
+        "c": 9
+      },
+      {
+        "n": "Brontosaurus",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Brontosaurus.webp",
+        "c": 9
+      },
+      {
+        "n": "Triceratops",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Triceratops.webp",
+        "c": 3.7
+      },
+      {
+        "n": "Tyrannosaurus Rex",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Tyrannosaurus Rex.webp",
+        "c": 0.3
+      },
+      {
+        "n": "Golden Amber",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Golden Amber.webp",
+        "c": 0.05
+      }
+    ]
+  },
+  "Candy": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Candy Corn",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Candy Corn.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Jellybean",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Jellybean.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Lollipop",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lollipop.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Black Licorice",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Black Licorice.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Peppermint",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Peppermint.webp",
+        "c": 8.5
+      },
+      {
+        "n": "Chocolate",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Chocolate.webp",
+        "c": 8.5
+      },
+      {
+        "n": "Gummy Worm",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Gummy Worm.webp",
+        "c": 4.5
+      },
+      {
+        "n": "Rock Candy",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Rock Candy.webp",
+        "c": 0.35
+      },
+      {
+        "n": "White Chocolate",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/White Chocolate.webp",
+        "c": 0.08
+      },
+      {
+        "n": "Red Licorice",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Red Licorice.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Blue Gummy Worm",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blue Gummy Worm.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Lovely Zoey",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Lovely Zoey.png",
+        "c": 0.0025
+      }
+    ]
+  },
+  "Fruit": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Apple",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Apple.webp",
+        "c": 15.2
+      },
+      {
+        "n": "Orange",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Orange.webp",
+        "c": 15
+      },
+      {
+        "n": "Lemon",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lemon.webp",
+        "c": 15
+      },
+      {
+        "n": "Lime",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lime.webp",
+        "c": 15
+      },
+      {
+        "n": "Grape",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Grape.webp",
+        "c": 15
+      },
+      {
+        "n": "Strawberry",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Strawberry.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Raspberry",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Raspberry.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Cherry",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Cherry.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Watermelon",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Watermelon.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Dragon Fruit",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Dragon Fruit.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Starfruit",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Starfruit.webp",
+        "c": 0.3
+      },
+      {
+        "n": "Green Apple",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Green Apple.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Blue Raspberry",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blue Raspberry.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Golden Apple",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Golden Apple.webp",
+        "c": 0.0025
+      }
+    ]
+  },
+  "Magic": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Magic Spellbook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Magic Spellbook.webp",
+        "c": 14
+      },
+      {
+        "n": "Cursed Ring",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Cursed Ring.webp",
+        "c": 14
+      },
+      {
+        "n": "Bubbling Cauldron",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Bubbling Cauldron.webp",
+        "c": 14
+      },
+      {
+        "n": "Fairy Dust",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Fairy Dust.webp",
+        "c": 14
+      },
+      {
+        "n": "Magic Scroll",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Magic Scroll.webp",
+        "c": 13.5
+      },
+      {
+        "n": "Magician&#39;s Wand",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Magician&#39;s Wand.webp",
+        "c": 8
+      },
+      {
+        "n": "Crystal Ball",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Crystal Ball.webp",
+        "c": 8
+      },
+      {
+        "n": "Ancient Runes",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Ancient Runes.webp",
+        "c": 8
+      },
+      {
+        "n": "Enchantment Hall",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Enchantment Hall.webp",
+        "c": 3
+      },
+      {
+        "n": "Strength Potion",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Strength Potion.webp",
+        "c": 3
+      },
+      {
+        "n": "Magician&#39;s Hat",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Magician&#39;s Hat.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Sentient Spellbook",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Sentient Spellbook.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Golden Magician&#39;s Wand",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Golden Magician&#39;s Wand.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Invisibility Cloak",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Invisibility Cloak.webp",
+        "c": 0.002
+      }
+    ]
+  },
+  "Music": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Sheet Music",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Sheet Music.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Music Disc",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Music Disc.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Xylophone",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Xylophone.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Drums",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Drums.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Metronome",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Metronome.webp",
+        "c": 8
+      },
+      {
+        "n": "Triangle",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Triangle.webp",
+        "c": 8
+      },
+      {
+        "n": "Speaker",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Speaker.webp",
+        "c": 3.1
+      },
+      {
+        "n": "Piano",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Piano.webp",
+        "c": 0.4
+      },
+      {
+        "n": "White Piano",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/White Piano.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Golden Harp",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Golden Harp.webp",
+        "c": 0.0037
+      }
+    ]
+  },
+  "Retro": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Dial Telephone",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Dial Telephone.webp",
+        "c": 17
+      },
+      {
+        "n": "EtchASketch",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/EtchASketch.webp",
+        "c": 17
+      },
+      {
+        "n": "Cassette Tape",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Cassette Tape.webp",
+        "c": 17
+      },
+      {
+        "n": "Polaroid Camera",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Polaroid Camera.webp",
+        "c": 15
+      },
+      {
+        "n": "Vending Machine",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Vending Machine.webp",
+        "c": 10
+      },
+      {
+        "n": "TamaGotchi",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Tamagotchi.webp",
+        "c": 14
+      },
+      {
+        "n": "GameBlook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/GameBlook.webp",
+        "c": 10
+      },
+      {
+        "n": "Donkey Kong Machine",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Donkey Kong Machine.webp",
+        "c": 10
+      },
+      {
+        "n": "BoomBox",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/BoomBox.webp",
+        "c": 3.5
+      },
+      {
+        "n": "CRT Television",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/CRT Television.webp",
+        "c": 0.45
+      },
+      {
+        "n": "GameBlook Color",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/GameBlook Color.webp",
+        "c": 0.03
+      },
+      {
+        "n": "PacMan Machine",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/PacMan Machine.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Blackintosh",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Blackintosh.webp",
+        "c": 0.004
+      }
+    ]
+  },
+  "Space": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Earth",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Earth.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Meteor",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Meteor.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Stars",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Stars.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Alien",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Alien.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Planet",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Planet.webp",
+        "c": 10
+      },
+      {
+        "n": "UFO",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/UFO.webp",
+        "c": 10
+      },
+      {
+        "n": "Spaceship",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Spaceship.webp",
+        "c": 4.5
+      },
+      {
+        "n": "Astronaut",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Astronaut.webp",
+        "c": 0.45
+      },
+      {
+        "n": "Pink Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Pink Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Red Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Red Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Orange Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Orange Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Yellow Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Yellow Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Lime Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lime Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Green Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Green Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Cyan Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Cyan Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Blue Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blue Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Purple Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Purple Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Brown Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Brown Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Black Astronaut",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Black Astronaut.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Space Terminal",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Space Terminal.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Space Debugger",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Space Debugger.webp",
+        "c": 0.0075
+      },
+      {
+        "n": "Tim the Alien",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Tim the Alien.webp",
+        "c": 0.005
+      },
+      {
+        "n": "Rainbow Astronaut",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Rainbow Astronaut.webp",
+        "c": 0.0025
+      }
+    ]
+  },
+  "Autumn": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Black Bear",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Black Bear.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Pumpkin Pie",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Pumpkin Pie.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Chipmunk",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Chipmunk.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Cornucopia",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Cornucopia.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Autumn Cat",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Autumn Cat.webp",
+        "c": 9
+      },
+      {
+        "n": "Pumpkin Puppy",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Pumpkin Puppy.webp",
+        "c": 9
+      },
+      {
+        "n": "Autumn Crow",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Autumn Crow.webp",
+        "c": 2.95
+      },
+      {
+        "n": "Turkey",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Turkey.webp",
+        "c": 1
+      },
+      {
+        "n": "Autumn Wreath",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Autumn Wreath.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Golden Pumpkin Pie",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Golden Pumpkin Pie.webp",
+        "c": 0.02
+      }
+    ]
+  },
+  "Combat": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Viking Helmet",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Viking Helmet.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Iron Chestplate",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Iron Chestplate.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Spiked Boot",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Spiked Boot.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Silver Shuriken",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Silver Shuriken.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Knight Shield",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Knight Shield.webp",
+        "c": 10
+      },
+      {
+        "n": "Knight Sword",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Knight Sword.webp",
+        "c": 10
+      },
+      {
+        "n": "Fragment Grenade",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Fragment Grenade.webp",
+        "c": 4.5
+      },
+      {
+        "n": "M12 Shotgun",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/M12 Shotgun.webp",
+        "c": 0.45
+      },
+      {
+        "n": "M67 Grenade",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/M67 Grenade.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Diamond Sword",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Diamond Sword.webp",
+        "c": 0.0025
+      },
+      {
+        "n": "Golden Shuriken",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Golden Shuriken.webp",
+        "c": 0.001
+      }
+    ]
+  },
+  "Pirate": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Deckhand",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Deckhand.webp",
+        "c": 16
+      },
+      {
+        "n": "Buccaneer",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Buccaneer.webp",
+        "c": 16
+      },
+      {
+        "n": "Swashbuckler",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Swashbuckler.webp",
+        "c": 16
+      },
+      {
+        "n": "Treasure Map",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Treasure Map.webp",
+        "c": 16
+      },
+      {
+        "n": "Seagull",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Seagull.webp",
+        "c": 16
+      },
+      {
+        "n": "Jolly Pirate",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Jolly Pirate.webp",
+        "c": 8
+      },
+      {
+        "n": "Pirate Ship",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Pirate Ship.webp",
+        "c": 8
+      },
+      {
+        "n": "Sea Monster",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Sea Monster.webp",
+        "c": 3.67
+      },
+      {
+        "n": "Captain Blackbeard",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Captain Blackbeard.webp",
+        "c": 0.3
+      },
+      {
+        "n": "Pirate Pufferfish",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Pirate Pufferfish.webp",
+        "c": 0.03
+      }
+    ]
+  },
+  "Safari": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Panda",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Panda.webp",
+        "c": 15
+      },
+      {
+        "n": "Sloth",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Sloth.webp",
+        "c": 15
+      },
+      {
+        "n": "Tenrec",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Tenrec.webp",
+        "c": 15
+      },
+      {
+        "n": "Flamingo",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Flamingo.webp",
+        "c": 15
+      },
+      {
+        "n": "Zebra",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Zebra.webp",
+        "c": 15
+      },
+      {
+        "n": "Elephant",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Elephant.webp",
+        "c": 7
+      },
+      {
+        "n": "Lemur",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Lemur.webp",
+        "c": 7
+      },
+      {
+        "n": "Peacock",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Peacock.webp",
+        "c": 7
+      },
+      {
+        "n": "Chameleon",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Chameleon.webp",
+        "c": 3.48
+      },
+      {
+        "n": "Lion",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Lion.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Rainbow Panda",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Rainbow Panda.webp",
+        "c": 0.02
+      },
+      {
+        "n": "White Peacock",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/White Peacock.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Tiger Zebra",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Tiger Zebra.webp",
+        "c": 0.02
+      }
+    ]
+  },
+  "Sci-Fi": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Gravity Switcher",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Gravity Switcher.webp",
+        "c": 15.2
+      },
+      {
+        "n": "Stealth Disguise Kit",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Stealth Disguise Kit.webp",
+        "c": 15
+      },
+      {
+        "n": "Object Miniaturizer",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Object Miniaturizer.webp",
+        "c": 15
+      },
+      {
+        "n": "Object Maximizer",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Object Maximizer.webp",
+        "c": 15
+      },
+      {
+        "n": "Holographic Display",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Holographic Display.webp",
+        "c": 15
+      },
+      {
+        "n": "Flying Car",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Flying Car.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Void Pistol",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Void Pistol.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Red Lightsaber",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Red Lightsaber.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Neural Implant",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Neural Implant.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Hijacked Radio",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Hijacked Radio.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Eternal Prism Blade",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Eternal Prism Blade.webp",
+        "c": 0.3
+      },
+      {
+        "n": "Blue Lightsaber",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blue Lightsaber.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Hijacked Neural Implant",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Hijacked Neural Implant.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Celestial Oracle Staff",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Celestial Oracle Staff.webp",
+        "c": 0.0033
+      }
+    ]
+  },
+  "Spooky": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Pumpkin",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Pumpkin.webp",
+        "c": 18.5
+      },
+      {
+        "n": "Swamp Monster",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Swamp Monster.webp",
+        "c": 18.5
+      },
+      {
+        "n": "Frankenstein",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Frankenstein.webp",
+        "c": 18.5
+      },
+      {
+        "n": "Vampire",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Vampire.webp",
+        "c": 18.5
+      },
+      {
+        "n": "Zombie",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Zombie.webp",
+        "c": 10.15
+      },
+      {
+        "n": "Mummy",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Mummy.webp",
+        "c": 10.15
+      },
+      {
+        "n": "Crow",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Crow.webp",
+        "c": 10.15
+      },
+      {
+        "n": "Skeleton",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Skeleton.webp",
+        "c": 6.7
+      },
+      {
+        "n": "Caramel Apple",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Caramel Apple.webp",
+        "c": 6.7
+      },
+      {
+        "n": "Werewolf",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Werewolf.webp",
+        "c": 5
+      },
+      {
+        "n": "Ghost",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Ghost.webp",
+        "c": 0.65
+      },
+      {
+        "n": "Haunted Pumpkin",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Haunted Pumpkin.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Pumpkin Cookie",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Pumpkin Cookie.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Mummy Cookie",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Mummy Cookie.webp",
+        "c": 0.025
+      },
+      {
+        "n": "Ghost Cookie",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Ghost Cookie.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Red Gummy Bear",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Red Gummy Bear.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Green Gummy Bear",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Green Gummy Bear.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Blue Gummy Bear",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Blue Gummy Bear.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Haunted Cookie",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Haunted Cookie.webp",
+        "c": 0.0175
+      },
+      {
+        "n": "Chick Chicken",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Chick Chicken.webp",
+        "c": 0.0175
+      },
+      {
+        "n": "Chicken Chick",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Chicken Chick.webp",
+        "c": 0.0175
+      },
+      {
+        "n": "Raccoon Bandit",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Raccoon Bandit.webp",
+        "c": 0.0175
+      },
+      {
+        "n": "Owl Sheriff",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Owl Sheriff.webp",
+        "c": 0.0175
+      },
+      {
+        "n": "Anaconda Wizard",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Anaconda Wizard.webp",
+        "c": 0.0175
+      },
+      {
+        "n": "Vampire Frog",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Vampire Frog.webp",
+        "c": 0.015
+      },
+      {
+        "n": "Pumpkin King",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Pumpkin King.webp",
+        "c": 0.015
+      },
+      {
+        "n": "Spooky Cookie",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Spooky Cookie.webp",
+        "c": 0.013
+      },
+      {
+        "n": "Spooky Pumpkin",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Spooky Pumpkin.webp",
+        "c": 0.0125
+      },
+      {
+        "n": "Spooky Mummy",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Spooky Mummy.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Spooky Skeleton",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Spooky Skeleton.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Spooky Ghost",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Spooky Ghost.webp",
+        "c": 0.005
+      }
+    ]
+  },
+  "Sports": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Basketball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Basketball.webp",
+        "c": 15
+      },
+      {
+        "n": "Baseball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Baseball.webp",
+        "c": 15
+      },
+      {
+        "n": "Soccer Ball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Soccer Ball.webp",
+        "c": 15
+      },
+      {
+        "n": "Tennis Ball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Tennis Ball.webp",
+        "c": 15
+      },
+      {
+        "n": "Golf Ball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Golf Ball.webp",
+        "c": 15
+      },
+      {
+        "n": "Football",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Football.webp",
+        "c": 7
+      },
+      {
+        "n": "Bowling Ball",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Bowling Ball.webp",
+        "c": 7
+      },
+      {
+        "n": "Ping Pong Racket",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Ping Pong Racket.webp",
+        "c": 7
+      },
+      {
+        "n": "Curling Stone",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Curling Stone.webp",
+        "c": 3.48
+      },
+      {
+        "n": "Football Helmet",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Football Helmet.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Red Bowling Ball",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Red Bowling Ball.webp",
+        "c": 0.02
+      }
+    ]
+  },
+  "Summer": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Sand Bucket",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Sand Bucket.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Beach Ball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Beach Ball.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Plastic Shovel",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Plastic Shovel.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Popsicle",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Popsicle.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Life Float",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Life Float.webp",
+        "c": 8
+      },
+      {
+        "n": "Conch Shell",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Conch Shell.webp",
+        "c": 8
+      },
+      {
+        "n": "Surfboard",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Surfboard.webp",
+        "c": 3.1
+      },
+      {
+        "n": "Sand Castle",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Sand Castle.webp",
+        "c": 0.4
+      },
+      {
+        "n": "Coconut Cocktail",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Coconut Cocktail.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Tropical Pig",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Tropical Pig.webp",
+        "c": 0.004
+      }
+    ]
+  },
+  "Aquatic": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Old Boot",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Old Boot.webp",
+        "c": 15
+      },
+      {
+        "n": "Jellyfish",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Jellyfish.webp",
+        "c": 15
+      },
+      {
+        "n": "Clownfish",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Clownfish.webp",
+        "c": 15
+      },
+      {
+        "n": "Frog",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Frog.webp",
+        "c": 15
+      },
+      {
+        "n": "Crab",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Crab.webp",
+        "c": 15
+      },
+      {
+        "n": "Pufferfish",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Pufferfish.webp",
+        "c": 6.1
+      },
+      {
+        "n": "Blobfish",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Blobfish.webp",
+        "c": 6.1
+      },
+      {
+        "n": "Octopus",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Octopus.webp",
+        "c": 6.1
+      },
+      {
+        "n": "Narwhal",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Narwhal.webp",
+        "c": 3
+      },
+      {
+        "n": "Dolphin",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Dolphin.webp",
+        "c": 3
+      },
+      {
+        "n": "Baby Shark",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Baby Shark.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Megalodon",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Megalodon.webp",
+        "c": 0.2
+      },
+      {
+        "n": "Lovely Frog",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lovely Frog.webp",
+        "c": 0.08
+      },
+      {
+        "n": "Lucky Frog",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lucky Frog.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Spring Frog",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Spring Frog.webp",
+        "c": 0.06
+      },
+      {
+        "n": "Rainbow Jellyfish",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Rainbow Jellyfish.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Blizzard Clownfish",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blizzard Clownfish.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Poison Dart Frog",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Poison Dart Frog.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Lemon Crab",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lemon Crab.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Crimson Octopus",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Crimson Octopus.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Donut Blobfish",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Donut Blobfish.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Rainbow Narwhal",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Rainbow Narwhal.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Pirahnna",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Pirahnna.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Kraken",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Kraken.webp",
+        "c": 0.003
+      }
+    ]
+  },
+  "Dessert": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Elderberry Pie",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Elderberry Pie.webp?1",
+        "c": 17.5
+      },
+      {
+        "n": "Cherry Pie",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Cherry Pie.webp",
+        "c": 17.5
+      },
+      {
+        "n": "Donut",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Donut.webp",
+        "c": 17.5
+      },
+      {
+        "n": "Flan",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Flan.webp",
+        "c": 15
+      },
+      {
+        "n": "Chocolate Ice Cream",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Chocolate Ice Cream.webp",
+        "c": 9
+      },
+      {
+        "n": "Strawberry Ice Cream",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Strawberry Ice Cream.webp",
+        "c": 9
+      },
+      {
+        "n": "Raspberry Macaroon",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Raspberry Macaroon.webp",
+        "c": 4
+      },
+      {
+        "n": "Cake",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Cake.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Blueberry Macaroon",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blueberry Macaroon.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Birthday Cake",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Birthday Cake.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Magic Chocolate",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Magic Chocolate.webp",
+        "c": 0.0025
+      }
+    ]
+  },
+  "Outback": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Dingo",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Dingo.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Echidna",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Echidna.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Koala",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Koala.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Kookaburra",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Kookaburra.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Platypus",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Platypus.webp",
+        "c": 7
+      },
+      {
+        "n": "Joey",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Joey.webp",
+        "c": 7
+      },
+      {
+        "n": "Kangaroo",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Kangaroo.webp",
+        "c": 7
+      },
+      {
+        "n": "Crocodile",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Crocodile.webp",
+        "c": 3.6
+      },
+      {
+        "n": "Sugar Glider",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Sugar Glider.webp",
+        "c": 0.37
+      },
+      {
+        "n": "Teal Platypus",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Teal Platypus.webp",
+        "c": 0.03
+      }
+    ]
+  },
+  "Science": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Magnet",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Magnet.webp",
+        "c": 15
+      },
+      {
+        "n": "DNA",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/DNA.webp",
+        "c": 15
+      },
+      {
+        "n": "Scale",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Scale.webp",
+        "c": 15
+      },
+      {
+        "n": "Beaker",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Beaker.webp",
+        "c": 15
+      },
+      {
+        "n": "Blood Bag",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Blood Bag.webp",
+        "c": 15
+      },
+      {
+        "n": "Magnifying Glass",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Magnifying Glass.webp",
+        "c": 15
+      },
+      {
+        "n": "Battery",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Battery.webp",
+        "c": 15
+      },
+      {
+        "n": "Atom",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Atom.webp",
+        "c": 3.5
+      },
+      {
+        "n": "Test Tubes",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Test Tubes.webp?1",
+        "c": 3.5
+      },
+      {
+        "n": "Bunsen Burner",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Bunsen Burner.webp",
+        "c": 3.5
+      },
+      {
+        "n": "Bacteria",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Bacteria.webp",
+        "c": 3.5
+      },
+      {
+        "n": "Microscope",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Microscope.webp",
+        "c": 3.5
+      },
+      {
+        "n": "Eyeball",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Eyeball.webp",
+        "c": 3.5
+      },
+      {
+        "n": "Toxic Waste",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Toxic Waste.webp",
+        "c": 2.3
+      },
+      {
+        "n": "Light Prism",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Prism.webp",
+        "c": 2.3
+      },
+      {
+        "n": "Telescope",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Telescope.webp",
+        "c": 2.3
+      },
+      {
+        "n": "Skull",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Skull.webp",
+        "c": 0.6
+      },
+      {
+        "n": "Lightbulb",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Lightbulb.webp",
+        "c": 0.6
+      },
+      {
+        "n": "Brain",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Brain.webp",
+        "c": 0.55
+      },
+      {
+        "n": "Flask",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Flask.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Petri Dish",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Petri Dish.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Albert Einstein",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Albert Einstein.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Neil deGrasse Tyson",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Neil deGrasse Tyson.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Gregor Mendel",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Gregor Mendel.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Isaac Newton",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Isaac Newton.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Stephen Hawking",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Stephen Hawking.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Nikola Tesla",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Nikola Tesla.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Charles Darwin",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Charles Darwin.webp",
+        "c": 0.07
+      },
+      {
+        "n": "Lava Lamp",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Lava Lamp.webp",
+        "c": 0.005
+      },
+      {
+        "n": "Beating Heart",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Beating Heart.webp",
+        "c": 0.0025
+      }
+    ]
+  },
+  "Blizzard": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Snow Globe",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Snow Globe.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Holiday Gift",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Holiday Gift.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Hot Chocolate",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Hot Chocolate.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Holiday Wreath",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Holiday Wreath.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Stocking",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Stocking.webp",
+        "c": 14.5
+      },
+      {
+        "n": "Gingerbread Man",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Gingerbread Man.webp",
+        "c": 7.1
+      },
+      {
+        "n": "Gingerbread House",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Gingerbread House.webp",
+        "c": 7.1
+      },
+      {
+        "n": "Reindeer",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Reindeer.webp",
+        "c": 7.1
+      },
+      {
+        "n": "Snowman",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Snowman.webp",
+        "c": 5.15
+      },
+      {
+        "n": "Santa Claus",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Santa Claus.webp",
+        "c": 1
+      },
+      {
+        "n": "Santa Claws",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Santa Claws.webp",
+        "c": 0.05
+      },
+      {
+        "n": "New York Snow Globe",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/New York Snow Globe.webp",
+        "c": 0.05
+      },
+      {
+        "n": "London Snow Globe",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/London Snow Globe.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Japan Snow Globe",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Japan Snow Globe.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Egypt Snow Globe",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Egypt Snow Globe.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Paris Snow Globe",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Paris Snow Globe.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Cookies Combo",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Cookies Combo.webp",
+        "c": 0.04
+      },
+      {
+        "n": "Frost Wreath",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Frost Wreath.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Tropical Globe",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Tropical Globe.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Chilly Flamingo",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Chilly Flamingo.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Snowy Bush Monster",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Snowy Bush Monster.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Red Sweater Snowman",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Red Sweater Snowman.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Blue Sweater Snowman",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Blue Sweater Snowman.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Elf Sweater Snowman",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Elf Sweater Snowman.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Nutcracker Koala",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Nutcracker Koala.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Golden Gift",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Golden Gift.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Diamond Gift",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Diamond Gift.webp",
+        "c": 0.005
+      },
+      {
+        "n": "Hamsta Claus",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Hamsta Claus.webp",
+        "c": 0.0025
+      }
+    ]
+  },
+  "Gemstone": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Jasper",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Jasper.webp",
+        "c": 15
+      },
+      {
+        "n": "Jade",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Jade.webp",
+        "c": 15
+      },
+      {
+        "n": "Onyx",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Onyx.webp",
+        "c": 15
+      },
+      {
+        "n": "Quartz",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Quartz.webp",
+        "c": 15
+      },
+      {
+        "n": "Lapis Lazuli",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lapis Lazuli.webp",
+        "c": 15
+      },
+      {
+        "n": "Topaz",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Topaz.webp",
+        "c": 6.8
+      },
+      {
+        "n": "Ruby",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Ruby.webp",
+        "c": 6.8
+      },
+      {
+        "n": "Sapphire",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Sapphire.webp",
+        "c": 6.8
+      },
+      {
+        "n": "Amethyst",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Amethyst.webp",
+        "c": 3.9
+      },
+      {
+        "n": "Opal",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Opal.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Moonstone",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Moonstone.webp",
+        "c": 0.2
+      },
+      {
+        "n": "Rose Quartz",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Rose Quartz.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Black Opal",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Black Opal.webp",
+        "c": 0.0037
+      }
+    ]
+  },
+  "Medieval": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Elf",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Elf.webp",
+        "c": 13.4
+      },
+      {
+        "n": "Witch",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Witch.webp",
+        "c": 13.4
+      },
+      {
+        "n": "Wizard",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Wizard.webp",
+        "c": 13.4
+      },
+      {
+        "n": "Fairy",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Fairy.webp",
+        "c": 13.4
+      },
+      {
+        "n": "Slime Monster",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Slime Monster.webp",
+        "c": 13.4
+      },
+      {
+        "n": "Jester",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Jester.webp",
+        "c": 9
+      },
+      {
+        "n": "Dragon",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Dragon.webp",
+        "c": 9
+      },
+      {
+        "n": "Queen",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Queen.webp",
+        "c": 9
+      },
+      {
+        "n": "Unicorn",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Unicorn.webp",
+        "c": 5
+      },
+      {
+        "n": "King",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/King.webp",
+        "c": 1
+      },
+      {
+        "n": "Agent Owl",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Agent Owl.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Wise Owl",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Wise Owl.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Master Elf",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Master Elf.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Phantom King",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Phantom King.webp",
+        "c": 0.005
+      },
+      {
+        "n": "Dark Dragon",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Dark Dragon.webp",
+        "c": 0.003
+      }
+    ]
+  },
+  "Breakfast": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Toast",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Toast.webp",
+        "c": 12.5
+      },
+      {
+        "n": "Cereal",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Cereal.webp",
+        "c": 12.5
+      },
+      {
+        "n": "Yogurt",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Yogurt.webp",
+        "c": 12.5
+      },
+      {
+        "n": "Breakfast Combo",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Breakfast Combo.webp",
+        "c": 12.5
+      },
+      {
+        "n": "Orange Juice",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Orange Juice.webp",
+        "c": 12.5
+      },
+      {
+        "n": "Milk",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Milk.webp",
+        "c": 12.5
+      },
+      {
+        "n": "Waffle",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Waffle.webp",
+        "c": 9
+      },
+      {
+        "n": "Pancakes",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Pancakes.webp",
+        "c": 9
+      },
+      {
+        "n": "French Toast",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/French Toast.webp",
+        "c": 5
+      },
+      {
+        "n": "Pizza",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Pizza.webp",
+        "c": 2
+      },
+      {
+        "n": "Sandwich",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Sandwich.webp",
+        "c": 1
+      },
+      {
+        "n": "Chocolate Milk",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Chocolate Milk.webp",
+        "c": 0.05
+      }
+    ]
+  },
+  "Elemental": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Nature Elemental",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Nature Elemental1.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Fire Elemental",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Fire Elemental1.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Water Elemental",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Water Elemental1.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Air Elemental",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Air Elemental1.webp",
+        "c": 18.75
+      },
+      {
+        "n": "Frost Elemental",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Frost Elemental1.webp",
+        "c": 10
+      },
+      {
+        "n": "Lava Elemental",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Lava Elemental1.webp",
+        "c": 10
+      },
+      {
+        "n": "Space Elemental",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Space Elemental1.webp",
+        "c": 4.5
+      },
+      {
+        "n": "Electric Elemental",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Electric Elemental1.webp",
+        "c": 0.45
+      },
+      {
+        "n": "Plasma Elemental",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Plasma Elemental1.webp",
+        "c": 0.05
+      }
+    ]
+  },
+  "Video Game": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Pac-Man",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Pac-Man.webp",
+        "c": 14
+      },
+      {
+        "n": "Space Invader",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Space Invader.webp",
+        "c": 14
+      },
+      {
+        "n": "Among Us",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Among Us.webp",
+        "c": 14
+      },
+      {
+        "n": "Poke Ball",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Poke Ball.webp",
+        "c": 14
+      },
+      {
+        "n": "Flappy Bird",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Flappy Bird.webp",
+        "c": 14
+      },
+      {
+        "n": "Goomba",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Goomba.webp",
+        "c": 9
+      },
+      {
+        "n": "Big Shield",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Big Shield.webp",
+        "c": 9
+      },
+      {
+        "n": "Creeper",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Creeper.webp",
+        "c": 9
+      },
+      {
+        "n": "Red Bird",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Red Bird.webp",
+        "c": 1.3
+      },
+      {
+        "n": "Companion Cube",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Companion Cube.webp",
+        "c": 1.3
+      },
+      {
+        "n": "Enderman",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Enderman.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Master Chief",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Master Chief.webp",
+        "c": 0.35
+      },
+      {
+        "n": "Golden Among Us",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Golden Among Us.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Puffed Pig",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Puffed Pig.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Gaming Mouse",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Gaming Mouse.webp",
+        "c": 0.003
+      }
+    ]
+  },
+  "Wonderland": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Two of Spades",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Two of Spades.webp",
+        "c": 15.2
+      },
+      {
+        "n": "Eat Me",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Eat Me.webp",
+        "c": 15
+      },
+      {
+        "n": "Drink Me",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Drink Me.webp",
+        "c": 15
+      },
+      {
+        "n": "Alice",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Alice.webp",
+        "c": 15
+      },
+      {
+        "n": "Queen of Hearts",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Queen of Hearts.webp",
+        "c": 15
+      },
+      {
+        "n": "Dormouse",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Dormouse.webp",
+        "c": 6.5
+      },
+      {
+        "n": "White Rabbit",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/White Rabbit.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Cheshire Cat",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Cheshire Cat.webp",
+        "c": 6.5
+      },
+      {
+        "n": "Caterpillar",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Caterpillar.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Mad Hatter",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Mad Hatter.webp",
+        "c": 2.5
+      },
+      {
+        "n": "King of Hearts",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/King of Hearts.webp",
+        "c": 0.3
+      },
+      {
+        "n": "Dinah",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Dinah.webp",
+        "c": 0.03
+      },
+      {
+        "n": "March Hare",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/March Hare.webp",
+        "c": 0.02
+      }
+    ]
+  },
+  "Ice Monster": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Ice Bat",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Ice Bat.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Ice Bug",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Ice Bug.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Ice Elemental",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Ice Elemental1.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Rock Monster",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Rock Monster.webp",
+        "c": 19.5
+      },
+      {
+        "n": "Dink",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Dink.webp",
+        "c": 8.5
+      },
+      {
+        "n": "Donk",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Donk.webp",
+        "c": 8.5
+      },
+      {
+        "n": "Bush Monster",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Bush Monster.webp",
+        "c": 4.5
+      },
+      {
+        "n": "Yeti",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Yeti.webp",
+        "c": 0.35
+      },
+      {
+        "n": "Ice Slime",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Ice Slime.webp",
+        "c": 0.08
+      },
+      {
+        "n": "Frozen Fossil",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Frozen Fossil.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Ice Crab",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Ice Crab.webp",
+        "c": 0.02
+      }
+    ]
+  },
+  "OG": {
+    "p": 25,
+    "b": [
+      {
+        "n": "yesbutterjeff",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/yesbutterjeff.webp",
+        "c": 13.75
+      },
+      {
+        "n": "Pablo",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Pablo.webp?1",
+        "c": 13.75
+      },
+      {
+        "n": "fristic",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/fristic.webp",
+        "c": 13.75
+      },
+      {
+        "n": "Minesraft2",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Minesraft2.webp",
+        "c": 13.75
+      },
+      {
+        "n": "Cerulean",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Cerulean.webp",
+        "c": 2.5
+      },
+      {
+        "n": "iBlooket",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/iBlooket.webp",
+        "c": 2.5
+      },
+      {
+        "n": "root",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/root.webp",
+        "c": 0.5
+      },
+      {
+        "n": "envi",
+        "r": "Legendary",
+        "m": "https://www.blacketvalues.com/static/images/envi2.png",
+        "c": 0.25
+      },
+      {
+        "n": "GAMERYT",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/GAMERYT.webp",
+        "c": 0.05
+      },
+      {
+        "n": "zastix",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/zastix.webp",
+        "c": 0.005
+      },
+      {
+        "n": "Xotic",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Xotic.webp",
+        "c": 0.0025
+      },
+      {
+        "n": "Festive Xotic",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Festive Xotic.webp",
+        "c": 0.001
+      },
+      {
+        "n": "Lovely zastix",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lovely zastix.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Lucky Pablo",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lucky Pablo.webp",
+        "c": 0.0075
+      },
+      {
+        "n": "Patriotic Piotr",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Patriotic Piotr.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Ankha Cerulean",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Cerulean Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "iPilgrim",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/iPilgrim.webp",
+        "c": 0.01
+      },
+      {
+        "n": "OneDumbElf",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/OneDumbElf.Webp",
+        "c": 0.001
+      },
+      {
+        "n": "Unwrapped",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/SantaUnblooked.webp",
+        "c": 0.002
+      },
+      {
+        "n": "Piotr Riding A Patriotic Turkey",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Piotr Riding A Patriotic Turkey.png",
+        "c": 0.001875
+      }
+    ]
+  },
+  "Time": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Pocket Watch",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Pocket Watch.webp",
+        "c": 14
+      },
+      {
+        "n": "Hourglass",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Hourglass.webp",
+        "c": 14
+      },
+      {
+        "n": "Cuckoo Clock",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Cuckoo Clock.webp",
+        "c": 14
+      },
+      {
+        "n": "Calendar Scroll",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Calendar Scroll.webp",
+        "c": 14
+      },
+      {
+        "n": "Analog Clock",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Analog Clock.webp",
+        "c": 14
+      },
+      {
+        "n": "Astrolabe",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Astrolabe.webp",
+        "c": 8
+      },
+      {
+        "n": "Time Capsule",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Time Capsule.webp",
+        "c": 8
+      },
+      {
+        "n": "Orrey",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Orrey.webp",
+        "c": 8
+      },
+      {
+        "n": "Grandfather Clock",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Grandfather Clock.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Clock Tower",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Clock Tower.webp",
+        "c": 0.4
+      },
+      {
+        "n": "Time Stone",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Time Stone.webp",
+        "c": 0.03
+      },
+      {
+        "n": "Time Machine",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Time Machine.webp",
+        "c": 0.004
+      }
+    ]
+  },
+  "Ankha": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Ankha",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Ankha.webp",
+        "c": 17.5
+      },
+      {
+        "n": "Mummy Ankha",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Mummy Ankha.webp",
+        "c": 17.5
+      },
+      {
+        "n": "Realistic Ankha",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Realistic Ankha.webp",
+        "c": 17.5
+      },
+      {
+        "n": "Glowing Ankha",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Glowing Ankha.webp",
+        "c": 15
+      },
+      {
+        "n": "Mark Ankha",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Mark Ankha.webp",
+        "c": 10
+      },
+      {
+        "n": "Ankha&#39;s House",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Ankha&#39;s House.webp",
+        "c": 10
+      },
+      {
+        "n": "High Ankha",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/High Ankha.webp",
+        "c": 4
+      },
+      {
+        "n": "Black Ankha",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Black Ankha.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Golden Ankha",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Golden Ankha.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Zone Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Zone Ankha.webp",
+        "c": 0.02
+      },
+      {
+        "n": "Rainbow Ankha",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Rainbow Ankha.webp",
+        "c": 0.003
+      },
+      {
+        "n": "Festive Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Festive Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Naughty Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Naughty Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Lovely Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lovely Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Ukraine Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Ukraine Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Lucky Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lucky Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Spring Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Spring Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "American Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/American Ankha.webp",
+        "c": 0.0087
+      },
+      {
+        "n": "Vampire Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Vampire Ankha.webp",
+        "c": 0.0077
+      },
+      {
+        "n": "Turkey Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Turkey Ankha.webp",
+        "c": 0.01
+      },
+      {
+        "n": "Lunar Ankha",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lunar Ankha.webp",
+        "c": 0.01
+      }
+    ]
+  },
+  "Color": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Brown Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Brown Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Dull Blue Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Dull Blue Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Dust Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Dust Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Maroon Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Maroon Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Tan Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Tan Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Baby Blue Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Baby Blue Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Gray Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Gray Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Light Blue Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Light Blue Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Lime Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Lime Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Orange Blook",
+        "r": "Uncommon",
+        "m": "https://blacket.org/content/blooks/Orange Blook.webp",
+        "c": 10
+      },
+      {
+        "n": "Blue Blook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Blue Blook.webp",
+        "c": 5
+      },
+      {
+        "n": "Salmon Blook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Salmon Blook.webp",
+        "c": 5
+      },
+      {
+        "n": "Teal Blook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Teal Blook.webp",
+        "c": 5
+      },
+      {
+        "n": "Burgandy Blook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Burgandy Blook.webp",
+        "c": 5
+      },
+      {
+        "n": "Green Blook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Green Blook.webp",
+        "c": 5
+      },
+      {
+        "n": "Mint Blook",
+        "r": "Rare",
+        "m": "https://blacket.org/content/blooks/Mint Blook.webp",
+        "c": 5
+      },
+      {
+        "n": "Purple Blook",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Purple Blook.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Yellow Blook",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Yellow Blook.webp",
+        "c": 2.5
+      },
+      {
+        "n": "Red Blook",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Red Blook.webp",
+        "c": 2.5
+      },
+      {
+        "n": "White Blook",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/White Blook.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Black Blook",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Black Blook.webp",
+        "c": 0.2
+      },
+      {
+        "n": "Pink Blook",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Pink Blook.webp",
+        "c": 0.05
+      },
+      {
+        "n": "Rainbow Blook",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Rainbow Blook.webp",
+        "c": 0.005
+      }
+    ]
+  },
+  "Peep (2024)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Yellow Bunny Peep",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Yellow Bunny Peep.webp",
+        "c": 22.5
+      },
+      {
+        "n": "White Bunny Peep",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/White Bunny Peep.webp",
+        "c": 22.5
+      },
+      {
+        "n": "Pink Bunny Peep",
+        "r": "Epic",
+        "m": "https://blacket.org/content/blooks/Pink Bunny Peep.webp",
+        "c": 22.5
+      },
+      {
+        "n": "Green Chick Peep",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Green Chick Peep.webp",
+        "c": 10.5
+      },
+      {
+        "n": "Yellow Chick Peep",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Yellow Chick Peep.webp",
+        "c": 10.5
+      },
+      {
+        "n": "Pink Chick Peep",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Pink Chick Peep.webp",
+        "c": 10.5
+      },
+      {
+        "n": "Melted Pink Peep",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Melted Pink Peep.webp",
+        "c": 1
+      },
+      {
+        "n": "Melted Blue Peep",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Melted Blue Peep.webp",
+        "c": 1
+      },
+      {
+        "n": "Pack of Peeps",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Pack of Peeps.webp",
+        "c": 0.1
+      }
+    ]
+  },
+  "Lucky (2025)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Pot o&#39; Gold",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Pot O Gold.png",
+        "c": 20
+      },
+      {
+        "n": "Gold Gremlin",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Gremlin.png",
+        "c": 20
+      },
+      {
+        "n": "Clover Knight",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Clover Knight.png",
+        "c": 20
+      },
+      {
+        "n": "Emerald",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Emerald.png",
+        "c": 8
+      },
+      {
+        "n": "St. Patrick&#39;s Hat",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/St Patricks Hat.png",
+        "c": 8
+      },
+      {
+        "n": "Harp o&#39; Clovers",
+        "r": "Epic",
+        "m": "https://www.blacketvalues.com/static/images/Harp O Clovers.png",
+        "c": 3
+      },
+      {
+        "n": "Shamrock",
+        "r": "Legendary",
+        "m": "https://www.blacketvalues.com/static/images/Shamrock 2.png",
+        "c": 0.5
+      },
+      {
+        "n": "Golden Griffin",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Golden Griffin.png",
+        "c": 0.01
+      },
+      {
+        "n": "Mug of Beer",
+        "r": "Mythical",
+        "m": "https://www.blacketvalues.com/static/images/Mug of Beer.png",
+        "c": 0.001
+      }
+    ]
+  },
+  "Clover (2026)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Lucky Boot",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Lucky Boot.png",
+        "c": 20
+      },
+      {
+        "n": "Lucky Socks",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Lucky Socks.png",
+        "c": 20
+      },
+      {
+        "n": "Horseshoe",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Horseshoe.png",
+        "c": 10
+      },
+      {
+        "n": "Rabbit&#39;s Foot",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Rabbit&#39;s Foot.png",
+        "c": 10
+      },
+      {
+        "n": "Shamrock Shake",
+        "r": "Epic",
+        "m": "https://www.blacketvalues.com/static/images/Shamrock Shake.png",
+        "c": 2
+      },
+      {
+        "n": "Four Leaf Clover",
+        "r": "Legendary",
+        "m": "https://www.blacketvalues.com/static/images/Four Leaf Clover.png",
+        "c": 0.3
+      },
+      {
+        "n": "Lucky Zoey",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Lucky Zoey 2.png",
+        "c": 0.002
+      },
+      {
+        "n": "Chest Mimic",
+        "r": "Mythical",
+        "m": "https://www.blacketvalues.com/static/images/Chest Mimic 2.png",
+        "c": 0.001
+      }
+    ]
+  },
+  "Horror (2025)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Jeff the Killer",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Jeff the Killer.png",
+        "c": 16
+      },
+      {
+        "n": "Slenderman",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Slenderman.png",
+        "c": 16
+      },
+      {
+        "n": "Siren Head",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Siren Head.png",
+        "c": 8
+      },
+      {
+        "n": "Plague Doctor",
+        "r": "Epic",
+        "m": "https://www.blacketvalues.com/static/images/Plague Doctor.png",
+        "c": 2.5
+      },
+      {
+        "n": "Michael Meyers",
+        "r": "Legendary",
+        "m": "https://www.blacketvalues.com/static/images/Michael Meyers.png",
+        "c": 0.5
+      },
+      {
+        "n": "Jason Voorhees",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Jason Voorhees.png",
+        "c": 0.02
+      },
+      {
+        "n": "Ghostface",
+        "r": "Mythical",
+        "m": "https://www.blacketvalues.com/static/images/Ghostface.png",
+        "c": 0.001
+      }
+    ]
+  },
+  "Lovely (2025)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Candy Heart",
+        "r": "Epic",
+        "m": "https://i.ibb.co/LzjfvjgY/Candy-Heart.png",
+        "c": 72.9
+      },
+      {
+        "n": "Box of Chocolates",
+        "r": "Legendary",
+        "m": "https://i.ibb.co/wrjs9p8H/Box-of-Chocolates.png",
+        "c": 22.9
+      },
+      {
+        "n": "Box of White Chocolates",
+        "r": "Chroma",
+        "m": "https://i.ibb.co/CKg0SKrh/Box-of-White-Chocolates.png",
+        "c": 1
+      },
+      {
+        "n": "Valentines Day Present",
+        "r": "Chroma",
+        "m": "https://i.ibb.co/PvKxy3q7/Valentines-Present.png",
+        "c": 1
+      },
+      {
+        "n": "Engagement Ring",
+        "r": "Mythical",
+        "m": "https://i.ibb.co/9mSyJX6V/Untitled2244-20250214075547.png",
+        "c": 0.1
+      }
+    ]
+  },
+  "Spring (2025)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Unpainted Egg",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Unpainted Egg.png",
+        "c": 19.5
+      },
+      {
+        "n": "Spotted Egg",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Spotted Egg.png",
+        "c": 19.5
+      },
+      {
+        "n": "Zigzag Egg",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Zigzag Egg.png",
+        "c": 19.5
+      },
+      {
+        "n": "Checker Egg",
+        "r": "Uncommon",
+        "m": "https://www.blacketvalues.com/static/images/Checker Egg.png",
+        "c": 19.5
+      },
+      {
+        "n": "Fred the Egg",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Fred the Egg.png",
+        "c": 8
+      },
+      {
+        "n": "Chocolate Egg",
+        "r": "Rare",
+        "m": "https://www.blacketvalues.com/static/images/Chocolate Egg.png",
+        "c": 8
+      },
+      {
+        "n": "Easter Basket",
+        "r": "Epic",
+        "m": "https://www.blacketvalues.com/static/images/Easter Basket.png",
+        "c": 3
+      },
+      {
+        "n": "Spring Rabbit",
+        "r": "Legendary",
+        "m": "https://blacket.org/content/blooks/Spring Rabbit.webp",
+        "c": 0.5
+      },
+      {
+        "n": "Mama Chick Egg",
+        "r": "Supreme",
+        "m": "https://i.ibb.co/XZDmfd8h/Untitled2772-20250420154205.png",
+        "c": 0.2
+      },
+      {
+        "n": "Evil Fred the Egg",
+        "r": "Chroma",
+        "m": "https://www.blacketvalues.com/static/images/Evil Fred the Egg.png",
+        "c": 0.05
+      },
+      {
+        "n": "Chip the Egg",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Chip the Egg.png",
+        "c": 0.1
+      },
+      {
+        "n": "Dead the Egg",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Dead the Egg.png",
+        "c": 0.1
+      },
+      {
+        "n": "Scuba the Egg",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Scuba the Egg.png",
+        "c": 0.1
+      },
+      {
+        "n": "Eugene the Egg",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Eugene the Egg.png",
+        "c": 0.1
+      },
+      {
+        "n": "Tim the Aliegg",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Tim the Aliegg.png",
+        "c": 0.1
+      },
+      {
+        "n": "Shannon the Egg",
+        "r": "Supreme",
+        "m": "https://www.blacketvalues.com/static/images/Shannon the Egg.png",
+        "c": 0.1
+      }
+    ]
+  },
+  "PAC 2 Event (2025)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Bulbasaur",
+        "r": "Legendary",
+        "m": "https://www.blacketvalues.com/static/images/Bulbasaur.png",
+        "c": null
+      },
+      {
+        "n": "Snorlax",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Snorlax.png",
+        "c": null
+      },
+      {
+        "n": "Gyarados",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Gyarados.png",
+        "c": null
+      },
+      {
+        "n": "Ditto",
+        "r": "Mythical",
+        "m": "https://www.blacketvalues.com/static/images/Ditto.gif",
+        "c": null
+      },
+      {
+        "n": "Mewtwo",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Mewtwo.png",
+        "c": null
+      },
+      {
+        "n": "Lopunny",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Lopunny.png",
+        "c": null
+      },
+      {
+        "n": "Eevee",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Eevee.png",
+        "c": null
+      },
+      {
+        "n": "Jigglypuff",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Jigglypuff.png",
+        "c": null
+      },
+      {
+        "n": "Gengar",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Gengar.png",
+        "c": null
+      },
+      {
+        "n": "Pikachu",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Pikachu.png",
+        "c": null
+      },
+      {
+        "n": "Charizard",
+        "r": "Iridescent",
+        "m": "https://www.blacketvalues.com/static/images/Charizard.gif",
+        "c": null
+      }
+    ]
+  },
+  "Furry (April Fools 2026)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Tung Tung Tung Sahur",
+        "r": "Common",
+        "m": "https://www.blacketvalues.com/static/images/Tung Tung Tung Sahur.png",
+        "c": 99.9933
+      },
+      {
+        "n": "Tung Tung Tung God",
+        "r": "Chroma",
+        "m": "https://www.blacketvalues.com/static/images/Tung Tung Tung God.png",
+        "c": 0.0067
+      }
+    ]
+  },
+  "Tropical Triumph Event (2023)": {
+    "p": 25,
+    "b": [
+      {
+        "n": "Golden Shovel",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Golden Shovel.webp",
+        "c": null
+      },
+      {
+        "n": "Treasure Chest",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Treasure Chest.webp",
+        "c": null
+      },
+      {
+        "n": "Golden Crab",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Golden Crab.webp",
+        "c": null
+      },
+      {
+        "n": "Golden Seashell",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Golden Seashell.webp",
+        "c": null
+      },
+      {
+        "n": "Gold Doubloon",
+        "r": "Mythical",
+        "m": "https://blacket.org/content/blooks/Gold Doubloon.webp",
+        "c": null
+      },
+      {
+        "n": "Tropical Island",
+        "r": "Iridescent",
+        "m": "https://blacket.org/content/blooks/Tropical Island.webp",
+        "c": null
+      },
+      {
+        "n": "Bia",
+        "r": "Iridescent",
+        "m": "https://blacket.org/content/blooks/Bia.webp",
+        "c": null
+      }
+    ]
+  },
+  "Miscellaneous": {
+    "p": 25,
+    "b": [
+      {
+        "n": "10k",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/10k.webp",
+        "c": 100
+      },
+      {
+        "n": "20k",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/20k.webp",
+        "c": null
+      },
+      {
+        "n": "50k",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/50k.png",
+        "c": 0.05
+      },
+      {
+        "n": "Lunar Frog",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lunar Frog.webp",
+        "c": 100
+      },
+      {
+        "n": "Lovely Planet",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lovely Planet.webp",
+        "c": 100
+      },
+      {
+        "n": "Lucky Hamster",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Lucky Hamster.webp",
+        "c": 100
+      },
+      {
+        "n": "Champagne Zoey",
+        "r": "Unique",
+        "m": "https://www.blacketvalues.com/static/images/Champagne Zoey resized.png",
+        "c": 100
+      },
+      {
+        "n": "Chocolate Rabbit",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Chocolate Rabbit.webp",
+        "c": 100
+      },
+      {
+        "n": "Cooked Turkey",
+        "r": "Supreme",
+        "m": "https://files.catbox.moe/ninu9n.png",
+        "c": 0.005
+      },
+      {
+        "n": "Demogorgon",
+        "r": "Mythical",
+        "m": "https://www.blacketvalues.com/static/images/Demogorgon.png",
+        "c": 0.0025
+      },
+      {
+        "n": "Eclipse",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Eclipse.webp",
+        "c": null
+      },
+      {
+        "n": "Party Pig",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Party Pig.webp",
+        "c": null
+      },
+      {
+        "n": "Leprechaun",
+        "r": "Supreme",
+        "m": "https://blacket.org/content/blooks/Leprechaun.webp",
+        "c": null
+      },
+      {
+        "n": "Zoey Plush",
+        "r": "Iridescent",
+        "m": "https://www.blacketvalues.com/static/images/Zoey Plush.png",
+        "c": null
+      },
+      {
+        "n": "Spring Globe",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Spring Globe.webp",
+        "c": null
+      },
+      {
+        "n": "Fireworks 2025",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Fireworks.webp",
+        "c": null
+      },
+      {
+        "n": "Lovely Peacock",
+        "r": "Chroma",
+        "m": "https://blacket.org/content/blooks/Lovely Peacock.webp",
+        "c": null
+      },
+      {
+        "n": "Best Blook Trophy",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Blook_Award.webp",
+        "c": null
+      },
+      {
+        "n": "Best Event Trophy",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/EventAward.webp",
+        "c": null
+      },
+      {
+        "n": "Best Artist Trophy",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Artist_Award.webp",
+        "c": null
+      },
+      {
+        "n": "Best Blacktuber Trophy",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Blacktuber_Award.webp",
+        "c": null
+      },
+      {
+        "n": "Best Known Player Trophy",
+        "r": "Unique",
+        "m": "https://blacket.org/content/blooks/Known_Award.webp",
+        "c": null
+      }
+    ]
+  }
+}
