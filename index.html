@@ -5300,107 +5300,8 @@ function saveClans() {
         }
 
 (function initPartySync() {
-            const PARTY_ROOM = 'blooket-clone';
-            let partySocket = null;
-            let reconnectAttempts = 0;
-            
-            function connectParty() {
-                try {
-                    console.log('Connecting to PartyKit...');
-                    partySocket = new WebSocket(`wss://${PARTY_ROOM}.partykit.dev/party/${PARTY_ROOM}`);
-                } catch (e) {
-                    console.error('PartyKit connection error:', e);
-                    setTimeout(connectParty, 3000);
-                    return;
-                }
-                
-                partySocket.onopen = () => {
-                    console.log('Connected to PartyKit server');
-                    reconnectAttempts = 0;
-                };
-                
-                partySocket.onerror = (e) => {
-                    console.error('PartyKit error:', e);
-                };
-                
-                partySocket.onmessage = (ev) => {
-                    try {
-                        const msg = JSON.parse(ev.data);
-                        if (msg.type !== 'sync' || !msg.data) return;
-                        const data = msg.data;
-                        
-                        if (data.users) users = data.users;
-                        if (data.globalMarket) globalMarket = data.globalMarket;
-                        if (data.clans) clans = data.clans;
-                        if (data.posts) communityPosts = data.posts;
-                        if (data.news) newsFeedPosts = data.news;
-                        if (data.chat) globalChatMessages = data.chat;
-                        if (data.bannedUsers) bannedUsers = data.bannedUsers;
-                        if (data.adminUsers) adminUsers = data.adminUsers;
-                        if (data.globalLuckBoost) globalLuckBoost = data.globalLuckBoost;
-                        if (data.onlinePresence) onlinePresence = data.onlinePresence;
-                        
-                        if (currentUser && users && users[currentUser]) {
-                            upC();
-                            updateMailBadge?.();
-                            if (!document.getElementById('v-b')?.classList.contains('hidden')) renderI?.();
-                            if (!document.getElementById('v-g')?.classList.contains('hidden')) renderG?.();
-                            if (!document.getElementById('v-post')?.classList.contains('hidden')) renderPosts?.();
-                            if (!document.getElementById('v-news')?.classList.contains('hidden')) renderNewsFeed?.();
-                            if (!document.getElementById('v-c')?.classList.contains('hidden')) renderClans?.();
-                            if (!document.getElementById('v-t')?.classList.contains('hidden')) renderT?.();
-                            if (!document.getElementById('v-chat')?.classList.contains('hidden')) renderGlobalChat?.();
-                            updateGlobalLuckUi?.();
-                        }
-                    } catch (_) {}
-                };
-                
-                partySocket.onclose = () => {
-                    console.log('PartyKit disconnected, reconnecting...');
-                    reconnectAttempts++;
-                    setTimeout(connectParty, Math.min(reconnectAttempts * 2000, 30000));
-                };
-            }
-            
-            window.partySync = (key, value) => {
-                if (partySocket?.readyState === WebSocket.OPEN) {
-                    partySocket.send(JSON.stringify({ type: 'update', key, value }));
-                }
-            };
-            
-            window.sendPartyChat = (from, body) => {
-                if (partySocket?.readyState === WebSocket.OPEN) {
-                    partySocket.send(JSON.stringify({ type: 'chat', from, body }));
-                }
-            };
-            
-            window.saveUserToServer = (name, data) => {
-                if (partySocket?.readyState === WebSocket.OPEN) {
-                    partySocket.send(JSON.stringify({ type: 'saveUser', name, ...data }));
-                }
-            };
-            
-            window.loadUserFromServer = (name) => {
-                return new Promise((resolve) => {
-                    if (partySocket?.readyState === WebSocket.OPEN) {
-                        const handler = (ev) => {
-                            try {
-                                const msg = JSON.parse(ev.data);
-                                if (msg.type === 'userData') {
-                                    partySocket.removeEventListener('message', handler);
-                                    resolve(msg.data);
-                                }
-                            } catch (_) {}
-                        };
-                        partySocket.addEventListener('message', handler);
-                        partySocket.send(JSON.stringify({ type: 'getUser', name }));
-                    } else {
-                        resolve(null);
-                    }
-                });
-            };
-            
-            connectParty();
+            // PartyKit disabled - network issue
+            console.log('Party sync disabled');
         })();
         
         function syncBroadcast(changedKey) {
@@ -7172,10 +7073,10 @@ function saveClans() {
         const authSubmit = document.getElementById('auth-submit');
         const authSwitch = document.getElementById('auth-switch');
 
-        authSwitch.onclick = () => {
+authSwitch.onclick = () => {
             isSignup = !isSignup;
             document.getElementById('auth-header').textContent = isSignup ? 'Create Account' : 'BV2T';
-            document.getElementById('auth-desc').textContent = isSignup ? 'Sign up to start your collection' : 'Login to your account to start collecting';
+            document.getElementById('auth-desc').textContent = isSignup ? 'Sign up to start your collection' : 'Login to your account';
             authSubmit.textContent = isSignup ? 'Sign Up' : 'Login';
             authSwitch.innerHTML = isSignup ? 'Already have an account? <span>Login</span>' : 'Don\'t have an account? <span>Sign Up</span>';
             const emailInput = document.getElementById('auth-email');
@@ -7190,15 +7091,19 @@ function saveClans() {
         authSubmit.onclick = async () => {
             const rawU = authUserIn.value;
             const u = normalizeUsername(rawU);
-            const e = authEmailIn.value.trim();
             const p = authPassIn.value.trim();
             if(!u || !p) return alert("Fill all fields");
             
-            console.log("Auth: trying", u, "signup:", isSignup);
+            document.getElementById('auth-header').textContent = 'Connecting...';
+            document.getElementById('auth-desc').textContent = 'Please wait while connecting to server';
+            authSubmit.disabled = true;
+            authSubmit.textContent = 'Connecting...';
+            
+            console.log("Auth: connecting...", u);
             
             try {
                 if(isSignup) {
-                    await apiPost('/api/auth/signup', { username: rawU, email: e, password: p });
+                    await apiPost('/api/auth/signup', { username: rawU, email: authEmailIn.value.trim(), password: p });
                     alert("Signed up!");
                     isSignup = false;
                     authSwitch.click();
@@ -7214,6 +7119,10 @@ function saveClans() {
                 if (msg === 'invalid_credentials') return alert('Invalid username or password.');
                 if (msg === 'invalid_username') return alert('Invalid username.');
                 if (msg === 'invalid_password') return alert('Invalid password.');
+                document.getElementById('auth-header').textContent = isSignup ? 'Create Account' : 'BV2T';
+                document.getElementById('auth-desc').textContent = isSignup ? 'Sign up to start your collection' : 'Login to your account';
+                authSubmit.disabled = false;
+                authSubmit.textContent = isSignup ? 'Sign Up' : 'Login';
                 return alert('Request failed: ' + msg);
             }
         };
