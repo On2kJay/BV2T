@@ -1,5 +1,14 @@
 import type { Room } from "partykit/server";
 
+interface UserData {
+  name: string;
+  coins: number;
+  exp: number;
+  level: number;
+  inv: Record<string, number>;
+  createdAt: number;
+}
+
 interface ChatMessage {
   from: string;
   body: string;
@@ -7,7 +16,7 @@ interface ChatMessage {
 }
 
 interface GameState {
-  users: Record<string, object>;
+  users: Record<string, UserData>;
   clans: Record<string, object>;
   market: unknown[];
   posts: unknown[];
@@ -34,10 +43,22 @@ const DEFAULT_STATE: GameState = {
   lastUpdate: Date.now()
 };
 
+const ADMIN_USERNAME = "on2kjay";
+
 export default class Server {
   state: GameState = JSON.parse(JSON.stringify(DEFAULT_STATE));
 
   constructor(readonly room: Room) {}
+
+  private saveUser(name: string, data: UserData) {
+    const key = name.toLowerCase();
+    this.state.users[key] = data;
+    this.state.lastUpdate = Date.now();
+  }
+
+  private getUser(name: string): UserData | null {
+    return this.state.users[name.toLowerCase()] || null;
+  }
 
   onConnect(conn: WebSocket, ctx: { request: Request }) {
     conn.send(JSON.stringify({ type: "sync", data: this.state }));
@@ -52,9 +73,28 @@ export default class Server {
         this.state.lastUpdate = Date.now();
         this.room.broadcast(JSON.stringify({ type: "sync", data: this.state }));
       } 
+      else if (msg.type === "saveUser") {
+        const { name, coins, exp, level, inv } = msg;
+        if (!name) return;
+        const existing = this.getUser(name);
+        this.saveUser(name, {
+          name,
+          coins: Math.max(0, Number(coins) || 0),
+          exp: Math.max(0, Number(exp) || 0),
+          level: Math.max(1, Number(level) || 1),
+          inv: inv || {},
+          createdAt: existing?.createdAt || Date.now()
+        });
+        this.room.broadcast(JSON.stringify({ type: "sync", data: { users: this.state.users } }));
+      }
+      else if (msg.type === "getUser") {
+        const user = this.getUser(msg.name);
+        sender.send(JSON.stringify({ type: "userData", data: user }));
+      }
       else if (msg.type === "chat") {
         const { from, body } = msg;
         if (!from || !body) return;
+        if (this.state.bannedUsers.includes(from.toLowerCase())) return;
         this.state.chat.push({ from, body, ts: Date.now() });
         if (this.state.chat.length > 800) this.state.chat = this.state.chat.slice(-800);
         this.state.lastUpdate = Date.now();

@@ -5230,8 +5230,40 @@
             { cost: 1000000, ms: 86400000, label: '24 hours' }
         ];
 
-        function saveClans() {
+function saveClans() {
             localStorage.setItem('blook_clans', JSON.stringify(clans));
+        }
+        function saveUsers() {
+            localStorage.setItem('blook_users', JSON.stringify(users));
+            syncBroadcast('blook_users');
+            if (window.saveUserToServer && currentUser && users[currentUser]) {
+                window.saveUserToServer(currentUser, users[currentUser]);
+            }
+        }
+
+        function savePosts() {
+            localStorage.setItem('blook_posts', JSON.stringify(communityPosts));
+            syncBroadcast('blook_posts');
+        }
+
+        function saveNewsFeed() {
+            localStorage.setItem('blook_news', JSON.stringify(newsFeedPosts));
+            syncBroadcast('blook_news');
+        }
+
+        function saveChat() {
+            localStorage.setItem('blook_global_chat', JSON.stringify(globalChatMessages));
+            syncBroadcast('blook_global_chat');
+        }
+
+        function saveOnlinePresence() {
+            localStorage.setItem('blook_online_presence', JSON.stringify(onlinePresence));
+            syncBroadcast('blook_online_presence');
+        }
+
+        function saveGlobalLuckBoost() {
+            localStorage.setItem('blook_global_luck_boost', JSON.stringify(globalLuckBoost));
+            syncBroadcast('blook_global_luck_boost');
         }
         function saveUsers() {
             localStorage.setItem('blook_users', JSON.stringify(users));
@@ -5270,17 +5302,25 @@
 (function initPartySync() {
             const PARTY_ROOM = 'blooket-clone';
             let partySocket = null;
+            let reconnectAttempts = 0;
             
             function connectParty() {
                 try {
-                    partySocket = new WebSocket(`wss://blooket-clone.partykit.dev/party/blooket-clone`);
-                } catch (_) {
+                    console.log('Connecting to PartyKit...');
+                    partySocket = new WebSocket(`wss://${PARTY_ROOM}.partykit.dev/party/${PARTY_ROOM}`);
+                } catch (e) {
+                    console.error('PartyKit connection error:', e);
                     setTimeout(connectParty, 3000);
                     return;
                 }
                 
                 partySocket.onopen = () => {
                     console.log('Connected to PartyKit server');
+                    reconnectAttempts = 0;
+                };
+                
+                partySocket.onerror = (e) => {
+                    console.error('PartyKit error:', e);
                 };
                 
                 partySocket.onmessage = (ev) => {
@@ -5316,7 +5356,9 @@
                 };
                 
                 partySocket.onclose = () => {
-                    setTimeout(connectParty, 3000);
+                    console.log('PartyKit disconnected, reconnecting...');
+                    reconnectAttempts++;
+                    setTimeout(connectParty, Math.min(reconnectAttempts * 2000, 30000));
                 };
             }
             
@@ -5330,6 +5372,32 @@
                 if (partySocket?.readyState === WebSocket.OPEN) {
                     partySocket.send(JSON.stringify({ type: 'chat', from, body }));
                 }
+            };
+            
+            window.saveUserToServer = (name, data) => {
+                if (partySocket?.readyState === WebSocket.OPEN) {
+                    partySocket.send(JSON.stringify({ type: 'saveUser', name, ...data }));
+                }
+            };
+            
+            window.loadUserFromServer = (name) => {
+                return new Promise((resolve) => {
+                    if (partySocket?.readyState === WebSocket.OPEN) {
+                        const handler = (ev) => {
+                            try {
+                                const msg = JSON.parse(ev.data);
+                                if (msg.type === 'userData') {
+                                    partySocket.removeEventListener('message', handler);
+                                    resolve(msg.data);
+                                }
+                            } catch (_) {}
+                        };
+                        partySocket.addEventListener('message', handler);
+                        partySocket.send(JSON.stringify({ type: 'getUser', name }));
+                    } else {
+                        resolve(null);
+                    }
+                });
             };
             
             connectParty();
@@ -7159,7 +7227,21 @@
 
                 // Keep existing client logic working while we migrate more state server-side.
                 if (!users || typeof users !== 'object') users = {};
-                if (!users[u]) users[u] = {};
+                
+                // Try loading from server first
+                let serverUser = null;
+                if (window.loadUserFromServer) {
+                    try {
+                        serverUser = await window.loadUserFromServer(u);
+                    } catch (_) {}
+                }
+                
+                if (serverUser) {
+                    users[u] = serverUser;
+                } else if (!users[u]) {
+                    users[u] = {};
+                }
+                
                 users[u].coins = me.coins;
                 users[u].level = me.level;
                 users[u].luck = me.luck;
