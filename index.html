@@ -87,6 +87,17 @@
         .blook-count { position: absolute; top: 10px; right: 10px; background: #111; padding: 4px 10px; border-radius: 12px; font-size: 1rem; font-weight: 900; border: 2px solid #333; }
         
         #modal-overlay, #admin-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 1000; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
+        #banned-overlay { position: fixed; inset: 0; background: #0a0a0a; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .banned-skull { font-size: 8rem; margin-bottom: 1rem; animation: bannedPulse 1.5s ease-in-out infinite; }
+        @keyframes bannedPulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+        .banned-title { font-size: 3.5rem; font-weight: 900; color: #ef4444; margin-bottom: 0.5rem; text-shadow: 0 4px 20px rgba(239,68,68,0.5); font-family: 'Titan One', cursive; }
+        .banned-subtitle { font-size: 1.2rem; color: #94a3b8; margin-bottom: 2rem; max-width: 400px; line-height: 1.6; }
+        .banned-reason-box { background: #1a1a1a; border: 2px solid #ef4444; border-radius: 16px; padding: 1.5rem 2rem; margin-bottom: 2rem; max-width: 450px; }
+        .banned-reason-title { color: #ef4444; font-weight: 900; margin-bottom: 0.5rem; }
+        .banned-reason-text { color: #e2e8f0; font-size: 1rem; line-height: 1.5; }
+        #banned-contact { background: #333; color: #fff; border: none; padding: 12px 32px; border-radius: 12px; font-size: 1rem; font-weight: 900; cursor: pointer; border-bottom: 4px solid #111; transition: 0.1s; }
+        #banned-contact:hover { background: #444; }
+        #banned-contact:active { transform: translateY(4px); border-bottom: 0; }
         #pack-modal, #admin-modal { text-align: center; width: 90%; max-width: 400px; }
         #admin-modal { background: #1e1e1e; padding: 2.5rem; border-radius: 24px; border: 5px solid #10b981; text-align: left; border-bottom: 12px solid #059669; }
         #pack-shaking { font-size: 10rem; animation: shake 0.4s infinite; margin-bottom: 2rem; filter: drop-shadow(0 10px 0 rgba(0,0,0,0.5)); }
@@ -477,6 +488,17 @@
             <button id="logout-btn" class="logout-btn">Logout</button>
         </div>
     </header>
+    <div id="banned-overlay" class="hidden">
+        <div class="banned-skull">&#9760;</div>
+        <div class="banned-title">ACCOUNT BANNED</div>
+        <div class="banned-subtitle">Your account has been permanently suspended for violating our terms of service.</div>
+        <div class="banned-reason-box">
+            <div class="banned-reason-title">Reason for Ban</div>
+            <div class="banned-reason-text" id="banned-reason-text">Violating community guidelines</div>
+        </div>
+        <button id="banned-contact" onclick="window.open('mailto:support@blooket.com','_blank')">Contact Support</button>
+    </div>
+
     <div id="global-luck-banner" class="hidden"></div>
     <div id="everyone-notif-banner" class="hidden"></div>
 
@@ -724,7 +746,7 @@
 
 
     
-    <div id="admin-overlay" class="hidden"><div id="admin-modal"><h2>Admin Panel</h2><div class="admin-row"><label>Coins:</label><input type="number" id="adm-c"><button id="adm-s" style="background:#10b981;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer">Set</button></div><div class="admin-row"><label>Infinite Luck:</label><input type="checkbox" id="adm-l"></div><div class="admin-row"><label>Arena Auto Win:</label><input type="checkbox" id="adm-aw"></div><div class="admin-row"><label>Level:</label><div style="display:flex;gap:0.4rem;align-items:center;"><input type="number" id="adm-lv" min="1" max="999" style="width:90px;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:6px;outline:none;"><button id="adm-lv-s" style="background:#8b5cf6;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:800">Set</button></div></div><div id="owner-admin-tools" style="margin:0.8rem 0;padding:0.7rem;border:1px solid #334155;border-radius:10px;"><div style="font-weight:900;margin-bottom:0.55rem;color:#c4b5fd;">Owner tools (On2kJay only)</div><div style="display:flex;gap:0.45rem;margin-bottom:0.45rem;"><input type="text" id="adm-add-admin-name" placeholder="Username to add admin" style="flex:1;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:6px;outline:none;"><button id="adm-add-admin-btn" style="background:#6366f1;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:800">Add Admin</button></div><div style="display:flex;gap:0.45rem;"><input type="text" id="adm-ban-name" placeholder="Username to ban" style="flex:1;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:6px;outline:none;"><button id="adm-ban-btn" style="background:#ef4444;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:800">Ban Account</button></div></div><div class="admin-row" style="flex-direction: column; align-items: stretch; gap: 0.5rem;"><label>Give Blook:</label><div style="display:flex;gap:0.5rem"><input type="text" id="adm-b-name" placeholder="Exact Blook Name" style="flex:1;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:8px;outline:none;"><button id="adm-b-btn" style="background:#3b82f6;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700">Give</button></div></div><button id="adm-cl" style="width:100%;padding:12px;background:#334155;color:white;border:none;border-radius:10px;cursor:pointer;margin-bottom:0.5rem;margin-top:1rem">Close</button><button id="adm-logout" style="width:100%;padding:10px;background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid #ef4444;border-radius:10px;cursor:pointer;font-weight:700">Admin Logout</button></div></div>
+    <div id="admin-overlay" class="hidden"><div id="admin-modal"><h2>Admin Panel</h2><div class="admin-row"><label>Coins:</label><input type="number" id="adm-c"><button id="adm-s" style="background:#10b981;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer">Set</button></div><div class="admin-row"><label>Infinite Luck:</label><input type="checkbox" id="adm-l"></div><div class="admin-row"><label>Arena Auto Win:</label><input type="checkbox" id="adm-aw"></div><div class="admin-row"><label>Level:</label><div style="display:flex;gap:0.4rem;align-items:center;"><input type="number" id="adm-lv" min="1" max="999" style="width:90px;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:6px;outline:none;"><button id="adm-lv-s" style="background:#8b5cf6;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:800">Set</button></div></div><div id="owner-admin-tools" style="margin:0.8rem 0;padding:0.7rem;border:1px solid #334155;border-radius:10px;"><div style="font-weight:900;margin-bottom:0.55rem;color:#c4b5fd;">Owner tools (On2kJay only)</div><div style="display:flex;gap:0.45rem;margin-bottom:0.45rem;"><input type="text" id="adm-add-admin-name" placeholder="Username to add admin" style="flex:1;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:6px;outline:none;"><button id="adm-add-admin-btn" style="background:#6366f1;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:800">Add Admin</button></div><div style="display:flex;gap:0.45rem;"><input type="text" id="adm-ban-name" placeholder="Username to ban" style="flex:1;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:6px;outline:none;"><button id="adm-ban-btn" style="background:#ef4444;color:white;border:none;padding:6px 12px;border-radius:8px;cursor:pointer;font-weight:800">Ban Account</button></div></div><div class="admin-row" style="flex-direction: column; align-items: stretch; gap: 0.5rem;"><label>Give Blook:</label><select id="adm-b-sel" class="trade-select" style="margin-bottom:0.25rem;"></select><div style="display:flex;gap:0.5rem"><input type="text" id="adm-b-name" placeholder="Exact Blook Name (or pick above)" style="flex:1;background:#0f172a;color:white;border:1px solid #334155;border-radius:8px;padding:8px;outline:none;"><button id="adm-b-btn" style="background:#3b82f6;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-weight:700">Give</button></div></div><button id="adm-cl" style="width:100%;padding:12px;background:#334155;color:white;border:none;border-radius:10px;cursor:pointer;margin-bottom:0.5rem;margin-top:1rem">Close</button><button id="adm-logout" style="width:100%;padding:10px;background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid #ef4444;border-radius:10px;cursor:pointer;font-weight:700">Admin Logout</button></div></div>
     <div id="market-list-overlay" class="hidden" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:2000; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px);">
         <div class="auth-card" style="max-width:400px; padding:2rem;">
             <h2 id="ml-title" class="auth-title" style="font-size:2rem; margin-bottom:1rem;">List Blook</h2>
@@ -752,6 +774,323 @@
         };
 
         async function apiRequest(method, url, body) {
+            // This project can run fully without a server.
+            // If the URL is an /api/* route, we handle it locally via localStorage-backed state.
+            const rawUrl = String(url || '');
+            if (rawUrl.startsWith('/api/')) {
+                const u = new URL(rawUrl, window.location.origin);
+                const path = u.pathname;
+                const query = u.searchParams;
+                const json = (obj) => obj === undefined ? null : obj;
+
+                const LS = {
+                    session: 'bv2t_session_v1'
+                };
+                const loadSession = () => {
+                    try { return JSON.parse(localStorage.getItem(LS.session) || 'null'); } catch (_) { return null; }
+                };
+                const saveSession = (s) => localStorage.setItem(LS.session, JSON.stringify(s || null));
+
+                const normalizeKey = (name) => String(name || '').trim();
+                const getLoggedInUser = () => {
+                    const s = loadSession();
+                    const fromSession = s && s.username ? normalizeUsername(s.username) : '';
+                    if (fromSession) return fromSession;
+
+                    // Fallback: keep you logged in across refreshes even if the session object is missing
+                    // (e.g. if the page was opened from a different origin previously).
+                    const legacy = normalizeUsername(localStorage.getItem('blook_logged_user') || '');
+                    if (legacy && users && users[legacy]) {
+                        saveSession({ username: legacy, at: Date.now(), restored: true });
+                        return legacy;
+                    }
+                    return '';
+                };
+                const requireUser = () => {
+                    const n = getLoggedInUser();
+                    if (!n) throw new Error('not_logged_in');
+                    if (!users || !users[n]) throw new Error('not_logged_in');
+                    return n;
+                };
+                const ensureUserRecord = (name) => {
+                    const n = normalizeUsername(name);
+                    if (!n) throw new Error('invalid_username');
+                    if (!users || typeof users !== 'object') users = {};
+                    if (!users[n]) users[n] = {};
+                    const uu = users[n];
+                    uu.username = n;
+                    uu.createdAt = uu.createdAt || Date.now();
+                    uu.coins = Number.isFinite(uu.coins) ? uu.coins : 0;
+                    uu.level = Number.isFinite(uu.level) ? uu.level : 1;
+                    uu.luck = !!uu.luck;
+                    uu.arenaAutoWin = !!uu.arenaAutoWin;
+                    uu.avatar = uu.avatar || 'elf.svg';
+                    uu.title = uu.title || 'Member';
+                    uu.inv = (uu.inv && typeof uu.inv === 'object') ? uu.inv : {};
+                    uu.stats = (uu.stats && typeof uu.stats === 'object') ? uu.stats : {};
+                    ensureClanUserFields(uu);
+                    return uu;
+                };
+
+                async function sha256(text) {
+                    const enc = new TextEncoder().encode(String(text || ''));
+                    const buf = await crypto.subtle.digest('SHA-256', enc);
+                    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+                }
+
+                // Parse JSON body (already object in our wrapper usage)
+                const reqBody = body && typeof body === 'object' ? body : null;
+
+                // --- AUTH ---
+                if (method === 'POST' && path === '/api/auth/signup') {
+                    const rawU = reqBody && (reqBody.username ?? '');
+                    const pass = reqBody && (reqBody.password ?? '');
+                    const uname = normalizeUsername(rawU);
+                    if (!uname) throw new Error('invalid_username');
+                    if (String(pass || '').length < 3) throw new Error('invalid_password');
+                    if (isBannedUser(uname)) throw new Error('banned');
+                    if (users && users[uname] && users[uname].pwHash) throw new Error('username_taken');
+
+                    const urec = ensureUserRecord(uname);
+                    urec.pwHash = await sha256(pass);
+                    // Starter coins so the app feels usable immediately.
+                    if (!Number.isFinite(urec.coins) || urec.coins <= 0) urec.coins = 500;
+                    saveUsers();
+                    return json({ ok: true });
+                }
+                if (method === 'POST' && path === '/api/auth/login') {
+                    const rawU = reqBody && (reqBody.username ?? '');
+                    const pass = reqBody && (reqBody.password ?? '');
+                    const uname = normalizeUsername(rawU);
+                    if (!uname) throw new Error('invalid_username');
+                    if (isBannedUser(uname)) throw new Error('banned');
+                    if (!users || !users[uname] || !users[uname].pwHash) throw new Error('invalid_credentials');
+                    const want = await sha256(pass);
+                    if (users[uname].pwHash !== want) throw new Error('invalid_credentials');
+                    saveSession({ username: uname, at: Date.now() });
+                    localStorage.setItem('blook_logged_user', uname);
+                    return json({ ok: true });
+                }
+                if (method === 'POST' && path === '/api/auth/logout') {
+                    saveSession(null);
+                    return json({ ok: true });
+                }
+                if (method === 'GET' && path === '/api/me') {
+                    const uname = getLoggedInUser();
+                    if (!uname) return json({ loggedIn: false });
+                    const urec = ensureUserRecord(uname);
+                    return json({
+                        loggedIn: true,
+                        username: uname,
+                        coins: urec.coins,
+                        level: urec.level,
+                        luck: !!urec.luck,
+                        arenaAutoWin: !!urec.arenaAutoWin,
+                        avatar: urec.avatar,
+                        title: urec.title,
+                        createdAt: urec.createdAt,
+                        lastHourlyCoinClaimAt: urec.lastHourlyCoinClaimAt || 0
+                    });
+                }
+
+                // --- USERS ---
+                {
+                    const m = path.match(/^\/api\/users\/(.+)$/);
+                    if (method === 'GET' && m) {
+                        const name = decodeURIComponent(m[1] || '');
+                        const uname = normalizeUsername(name);
+                        if (!uname || !users || !users[uname]) throw new Error('not_found');
+                        const src = ensureUserRecord(uname);
+                        // Return "public" user data (no password hash)
+                        const out = { ...src };
+                        delete out.pwHash;
+                        return json(out);
+                    }
+                }
+
+                // --- INVENTORY ---
+                if (method === 'GET' && path === '/api/inventory/me') {
+                    const uname = requireUser();
+                    const urec = ensureUserRecord(uname);
+                    return json({ inv: urec.inv || {} });
+                }
+
+                // --- CHAT ---
+                if (method === 'GET' && path === '/api/chat/global') {
+                    const limit = Math.max(1, Math.min(500, parseInt(query.get('limit') || '220', 10) || 220));
+                    const msgs = Array.isArray(globalChatMessages) ? globalChatMessages.slice(-limit) : [];
+                    return json({ messages: msgs });
+                }
+                if (method === 'POST' && path === '/api/chat/global') {
+                    const uname = requireUser();
+                    const text = String((reqBody && reqBody.body) || '').trim();
+                    if (!text) throw new Error('invalid_body');
+                    if (!Array.isArray(globalChatMessages)) globalChatMessages = [];
+                    globalChatMessages.push({ from: uname, body: text, ts: Date.now() });
+                    if (globalChatMessages.length > 800) globalChatMessages = globalChatMessages.slice(-800);
+                    saveChat();
+                    return json({ ok: true });
+                }
+
+                // --- POSTS ---
+                if (method === 'GET' && path === '/api/posts') {
+                    const limit = Math.max(1, Math.min(400, parseInt(query.get('limit') || '200', 10) || 200));
+                    const posts = Array.isArray(communityPosts) ? communityPosts.slice(0, limit) : [];
+                    return json({ posts });
+                }
+                if (method === 'POST' && path === '/api/posts') {
+                    const uname = requireUser();
+                    const category = String((reqBody && reqBody.category) || '').trim() || 'General';
+                    const text = String((reqBody && reqBody.body) || '').trim();
+                    if (!text) throw new Error('invalid_body');
+                    if (!Array.isArray(communityPosts)) communityPosts = [];
+                    const id = Date.now() + Math.floor(Math.random() * 1000);
+                    communityPosts.unshift({ id, author: uname, category, body: text, ts: Date.now() });
+                    if (communityPosts.length > 600) communityPosts = communityPosts.slice(0, 600);
+                    savePosts();
+                    return json({ ok: true, id });
+                }
+                {
+                    const m = path.match(/^\/api\/posts\/(\d+)$/);
+                    if (method === 'DELETE' && m) {
+                        const uname = requireUser();
+                        const id = parseInt(m[1], 10);
+                        if (!Array.isArray(communityPosts)) communityPosts = [];
+                        const before = communityPosts.length;
+                        communityPosts = communityPosts.filter(p => !(p && p.id === id && (p.author === uname || isAdminUser(uname))));
+                        if (communityPosts.length === before) throw new Error('not_found');
+                        savePosts();
+                        return json({ ok: true });
+                    }
+                }
+
+                // --- NEWS ---
+                if (method === 'GET' && path === '/api/news') {
+                    const limit = Math.max(1, Math.min(300, parseInt(query.get('limit') || '120', 10) || 120));
+                    const posts = Array.isArray(newsFeedPosts) ? newsFeedPosts.slice(0, limit) : [];
+                    return json({ posts });
+                }
+                if (method === 'POST' && path === '/api/news') {
+                    const uname = requireUser();
+                    if (!isAdminUser(uname) && String(uname || '').toLowerCase() !== OWNER_USERNAME) throw new Error('forbidden');
+                    const title = String((reqBody && reqBody.title) || '').trim();
+                    const text = String((reqBody && reqBody.body) || '').trim();
+                    if (!title || !text) throw new Error('invalid_body');
+                    if (!Array.isArray(newsFeedPosts)) newsFeedPosts = [];
+                    const id = Date.now() + Math.floor(Math.random() * 1000);
+                    newsFeedPosts.unshift({ id, author: uname, title, body: text, ts: Date.now() });
+                    if (newsFeedPosts.length > 600) newsFeedPosts = newsFeedPosts.slice(0, 600);
+                    saveNewsFeed();
+                    return json({ ok: true, id });
+                }
+
+                // --- MARKET ---
+                if (method === 'GET' && path === '/api/market') {
+                    const limit = Math.max(1, Math.min(600, parseInt(query.get('limit') || '300', 10) || 300));
+                    const items = Array.isArray(globalMarket) ? globalMarket.slice(0, limit) : [];
+                    return json({ items });
+                }
+                if (method === 'POST' && path === '/api/market/list') {
+                    const uname = requireUser();
+                    const blook = String((reqBody && reqBody.blook) || '').trim();
+                    const price = Math.max(1, parseInt((reqBody && reqBody.price) || '0', 10) || 0);
+                    const count = Math.max(1, parseInt((reqBody && reqBody.count) || '0', 10) || 0);
+                    if (!blook || !price || !count) throw new Error('invalid_body');
+                    const urec = ensureUserRecord(uname);
+                    if (!urec.inv || (urec.inv[blook] || 0) < count) throw new Error('not_enough_blooks');
+                    urec.inv[blook] -= count;
+                    if (urec.inv[blook] <= 0) delete urec.inv[blook];
+                    if (!Array.isArray(globalMarket)) globalMarket = [];
+                    const id = Date.now() + Math.floor(Math.random() * 1000);
+                    globalMarket.unshift({ id, seller: uname, blook, price, count, ts: Date.now() });
+                    saveUsers();
+                    saveMarket();
+                    return json({ ok: true, id });
+                }
+                if (method === 'POST' && path === '/api/market/buy') {
+                    const uname = requireUser();
+                    const id = Number(reqBody && reqBody.id);
+                    const count = Math.max(1, parseInt((reqBody && reqBody.count) || '1', 10) || 1);
+                    if (!Number.isFinite(id)) throw new Error('invalid_body');
+                    if (!Array.isArray(globalMarket)) globalMarket = [];
+                    const item = globalMarket.find(x => x && x.id === id);
+                    if (!item || item.count <= 0) throw new Error('not_found');
+                    if (count > item.count) throw new Error('not_enough_stock');
+                    if (item.seller === uname) throw new Error('cannot_buy_own');
+                    const buyer = ensureUserRecord(uname);
+                    const total = item.price * count;
+                    if ((buyer.coins || 0) < total) throw new Error('not_enough_coins');
+                    const seller = ensureUserRecord(item.seller);
+                    buyer.coins -= total;
+                    seller.coins += total;
+                    buyer.inv[item.blook] = (buyer.inv[item.blook] || 0) + count;
+                    item.count -= count;
+                    if (item.count <= 0) globalMarket = globalMarket.filter(x => x && x.id !== id);
+                    saveUsers();
+                    saveMarket();
+                    return json({ ok: true });
+                }
+                if (method === 'POST' && path === '/api/market/cancel') {
+                    const uname = requireUser();
+                    const id = Number(reqBody && reqBody.id);
+                    if (!Number.isFinite(id)) throw new Error('invalid_body');
+                    if (!Array.isArray(globalMarket)) globalMarket = [];
+                    const idx = globalMarket.findIndex(x => x && x.id === id);
+                    if (idx < 0) throw new Error('not_found');
+                    const item = globalMarket[idx];
+                    if (item.seller !== uname && !isAdminUser(uname)) throw new Error('forbidden');
+                    const urec = ensureUserRecord(item.seller);
+                    urec.inv[item.blook] = (urec.inv[item.blook] || 0) + (item.count || 0);
+                    globalMarket.splice(idx, 1);
+                    saveUsers();
+                    saveMarket();
+                    return json({ ok: true });
+                }
+
+                // --- TRADES (simple local inbox) ---
+                if (method === 'GET' && path === '/api/trades/inbox') {
+                    const uname = requireUser();
+                    const urec = ensureUserRecord(uname);
+                    const inbox = Array.isArray(urec.tradeInbox) ? urec.tradeInbox : [];
+                    return json({ trades: inbox });
+                }
+                if (method === 'POST' && path === '/api/trades') {
+                    const uname = requireUser();
+                    const to = normalizeUsername(reqBody && reqBody.to);
+                    if (!to || !users || !users[to]) throw new Error('not_found');
+                    const offer = (reqBody && reqBody.offer && typeof reqBody.offer === 'object') ? reqBody.offer : {};
+                    const request = (reqBody && reqBody.request && typeof reqBody.request === 'object') ? reqBody.request : {};
+                    const note = String((reqBody && reqBody.note) || '').slice(0, 240);
+                    const id = Date.now() + Math.floor(Math.random() * 1000);
+                    const trade = { id, from: uname, to, offer, request, note, ts: Date.now() };
+                    const recv = ensureUserRecord(to);
+                    if (!Array.isArray(recv.tradeInbox)) recv.tradeInbox = [];
+                    recv.tradeInbox.unshift(trade);
+                    if (recv.tradeInbox.length > 200) recv.tradeInbox = recv.tradeInbox.slice(0, 200);
+                    saveUsers();
+                    return json({ ok: true, id });
+                }
+                {
+                    const m = path.match(/^\/api\/trades\/(\d+)\/(accept|decline)$/);
+                    if (method === 'POST' && m) {
+                        const uname = requireUser();
+                        const tradeId = parseInt(m[1], 10);
+                        const action = m[2];
+                        const urec = ensureUserRecord(uname);
+                        if (!Array.isArray(urec.tradeInbox)) urec.tradeInbox = [];
+                        const t = urec.tradeInbox.find(x => x && x.id === tradeId);
+                        if (!t) throw new Error('not_found');
+                        // Minimal: accepting/declining just removes from inbox; inventory exchange happens client-side elsewhere.
+                        urec.tradeInbox = urec.tradeInbox.filter(x => x && x.id !== tradeId);
+                        saveUsers();
+                        return json({ ok: true, action });
+                    }
+                }
+
+                throw new Error('not_implemented');
+            }
+
+            // Non-API requests still use the real network fetch (assets, etc.)
             const res = await fetch(url, {
                 method,
                 headers: body ? { 'Content-Type': 'application/json' } : undefined,
@@ -4729,10 +5068,11 @@
         let newsFeedPosts = JSON.parse(localStorage.getItem('blook_news') || '[]');
         let globalChatMessages = JSON.parse(localStorage.getItem('blook_global_chat') || '[]');
         let onlinePresence = JSON.parse(localStorage.getItem('blook_online_presence') || '{}');
-        // NOTE: Admin access is NOT stored in localStorage.
-        // If you can edit localStorage, you shouldn't be able to grant yourself admin.
+        // Admin list is stored locally (serverless mode).
         // OWNER_USERNAME is defined a bit later; initialize with a safe default for now.
-        let adminUsers = ['on2kjay'];
+        let adminUsers = JSON.parse(localStorage.getItem('blook_admin_users') || '[]');
+        if (!Array.isArray(adminUsers)) adminUsers = [];
+        adminUsers.push('on2kjay');
         let bannedUsers = JSON.parse(localStorage.getItem('blook_banned_users') || '[]');
         let globalLuckBoost = JSON.parse(localStorage.getItem('blook_global_luck_boost') || 'null');
         if (!users || typeof users !== 'object' || Array.isArray(users)) users = {};
@@ -4858,10 +5198,13 @@
         function saveAdminUsers() {
             adminUsers = normalizeNameList(adminUsers);
             if (!adminUsers.includes(OWNER_USERNAME)) adminUsers.unshift(OWNER_USERNAME);
+            localStorage.setItem('blook_admin_users', JSON.stringify(adminUsers));
+            syncBroadcast('blook_admin_users');
         }
         function saveBannedUsers() {
             bannedUsers = normalizeNameList(bannedUsers);
             localStorage.setItem('blook_banned_users', JSON.stringify(bannedUsers));
+            syncBroadcast('blook_banned_users');
         }
 
         const HOURLY_CLAIM_COINS = 500;
@@ -4890,23 +5233,130 @@
         function saveClans() {
             localStorage.setItem('blook_clans', JSON.stringify(clans));
         }
+        function saveUsers() {
+            localStorage.setItem('blook_users', JSON.stringify(users));
+            syncBroadcast('blook_users');
+        }
 
         function savePosts() {
             localStorage.setItem('blook_posts', JSON.stringify(communityPosts));
+            syncBroadcast('blook_posts');
         }
         function saveNewsFeed() {
             localStorage.setItem('blook_news', JSON.stringify(newsFeedPosts));
+            syncBroadcast('blook_news');
         }
         function saveChat() {
             localStorage.setItem('blook_global_chat', JSON.stringify(globalChatMessages));
+            syncBroadcast('blook_global_chat');
         }
         function saveOnlinePresence() {
             localStorage.setItem('blook_online_presence', JSON.stringify(onlinePresence));
+            syncBroadcast('blook_online_presence');
         }
 
         function saveGlobalLuckBoost() {
             localStorage.setItem('blook_global_luck_boost', JSON.stringify(globalLuckBoost));
+            syncBroadcast('blook_global_luck_boost');
         }
+
+        function syncBroadcast(changedKey) {
+            try {
+                if (!window.__bv2tSyncChan) return;
+                window.__bv2tSyncChan.postMessage({ t: 'ls', k: String(changedKey || ''), ts: Date.now() });
+            } catch (_) {}
+        }
+
+(function initPartySync() {
+            const PARTY_ROOM = 'blooket-clone';
+            let partySocket = null;
+            
+            function connectParty() {
+                try {
+                    partySocket = new WebSocket(`wss://blooket-clone.partykit.dev/party/blooket-clone`);
+                } catch (_) {
+                    setTimeout(connectParty, 3000);
+                    return;
+                }
+                
+                partySocket.onopen = () => {
+                    console.log('Connected to PartyKit server');
+                };
+                
+                partySocket.onmessage = (ev) => {
+                    try {
+                        const msg = JSON.parse(ev.data);
+                        if (msg.type !== 'sync' || !msg.data) return;
+                        const data = msg.data;
+                        
+                        if (data.users) users = data.users;
+                        if (data.globalMarket) globalMarket = data.globalMarket;
+                        if (data.clans) clans = data.clans;
+                        if (data.posts) communityPosts = data.posts;
+                        if (data.news) newsFeedPosts = data.news;
+                        if (data.chat) globalChatMessages = data.chat;
+                        if (data.bannedUsers) bannedUsers = data.bannedUsers;
+                        if (data.adminUsers) adminUsers = data.adminUsers;
+                        if (data.globalLuckBoost) globalLuckBoost = data.globalLuckBoost;
+                        if (data.onlinePresence) onlinePresence = data.onlinePresence;
+                        
+                        if (currentUser && users && users[currentUser]) {
+                            upC();
+                            updateMailBadge?.();
+                            if (!document.getElementById('v-b')?.classList.contains('hidden')) renderI?.();
+                            if (!document.getElementById('v-g')?.classList.contains('hidden')) renderG?.();
+                            if (!document.getElementById('v-post')?.classList.contains('hidden')) renderPosts?.();
+                            if (!document.getElementById('v-news')?.classList.contains('hidden')) renderNewsFeed?.();
+                            if (!document.getElementById('v-c')?.classList.contains('hidden')) renderClans?.();
+                            if (!document.getElementById('v-t')?.classList.contains('hidden')) renderT?.();
+                            if (!document.getElementById('v-chat')?.classList.contains('hidden')) renderGlobalChat?.();
+                            updateGlobalLuckUi?.();
+                        }
+                    } catch (_) {}
+                };
+                
+                partySocket.onclose = () => {
+                    setTimeout(connectParty, 3000);
+                };
+            }
+            
+            window.partySync = (key, value) => {
+                if (partySocket?.readyState === WebSocket.OPEN) {
+                    partySocket.send(JSON.stringify({ type: 'update', key, value }));
+                }
+            };
+            
+            window.sendPartyChat = (from, body) => {
+                if (partySocket?.readyState === WebSocket.OPEN) {
+                    partySocket.send(JSON.stringify({ type: 'chat', from, body }));
+                }
+            };
+            
+            connectParty();
+        })();
+        
+        function syncBroadcast(changedKey) {
+            if (window.partySync) {
+                const keyMap = {
+                    'blook_users': 'users',
+                    'blook_global_market': 'globalMarket',
+                    'blook_clans': 'clans',
+                    'blook_posts': 'posts',
+                    'blook_news': 'news',
+                    'blook_global_chat': 'chat',
+                    'blook_banned_users': 'bannedUsers',
+                    'blook_admin_users': 'adminUsers',
+                    'blook_global_luck_boost': 'globalLuckBoost',
+                    'blook_online_presence': 'onlinePresence'
+                };
+                const serverKey = keyMap[changedKey] || changedKey;
+                const data = { users, globalMarket, clans, posts: communityPosts, news: newsFeedPosts, chat: globalChatMessages, bannedUsers, adminUsers, globalLuckBoost, onlinePresence };
+                window.partySync(serverKey, data[serverKey]);
+            }
+        }
+                };
+            } catch (_) {}
+        })();
 
         function globalLuckIsActive() {
             return !!(globalLuckBoost && globalLuckBoost.expiresAt && Date.now() < globalLuckBoost.expiresAt);
@@ -5296,9 +5746,14 @@
             if (body.includes('@everyone') && currentUser.toLowerCase() === OWNER_USERNAME) {
                 showEveryoneNotification(currentUser, body.replace('@everyone', '').trim() || 'Check the chat!');
             }
+            
+            // Use PartyKit if connected, otherwise fall back to API
+            if (window.sendPartyChat) {
+                window.sendPartyChat(currentUser, body);
+            }
             apiPost('/api/chat/global', { body })
                 .then(() => renderGlobalChat())
-                .catch(() => alert('Failed to send message.'));
+                .catch(() => {});
         }
 
         function renderClanChat(clan) {
@@ -6972,7 +7427,10 @@
         }
 
 
-        function saveMarket() { /* server-side */ }
+        function saveMarket() {
+            localStorage.setItem('blook_global_market', JSON.stringify(globalMarket));
+            syncBroadcast('blook_global_market');
+        }
 
         function promptListMarket(blookName) {
             const u = users[currentUser];
@@ -7613,7 +8071,33 @@
         document.getElementById('promo-btn').onclick = () => {
             const code = document.getElementById('promo-input').value.trim().toUpperCase();
             if (!code) return;
+
+            // Admin access via promo box
+            if (code === 'ADMIN') {
+                if (!currentUser || !users[currentUser]) return alert('Login first.');
+                const key = String(currentUser || '').trim().toLowerCase();
+                if (!key) return alert('Login first.');
+                if (!isAdminUser(key)) {
+                    adminUsers.push(key);
+                    saveAdminUsers();
+                }
+                document.getElementById('promo-input').value = '';
+                alert('Admin access enabled for this account.');
+                openAdminPanel();
+                return;
+            }
             
+            if (code === 'RESET') {
+                document.getElementById('promo-input').value = '';
+                resetAllData();
+                return;
+            }
+            if (code === 'RESETACCOUNTS') {
+                document.getElementById('promo-input').value = '';
+                resetAllAccounts();
+                return;
+            }
+
             if (!PROMO_CODES[code]) {
                 return alert("Invalid promo code.");
             }
@@ -7655,9 +8139,9 @@
             alert('GLOBAL LUCK ACTIVE! x' + GLOBAL_LUCK_MULT + ' luck for 5 minutes.');
         };
 
-        document.querySelector('.logo').onclick = () => {
-
-            if(!isAdminUser(currentUser)) return alert("Admin panel restricted to admins.");
+        function openAdminPanel() {
+            if (!currentUser || !users[currentUser]) return alert('Login first.');
+            if (!isAdminUser(currentUser)) return alert("Admin panel restricted to admins.");
             document.getElementById('admin-overlay').classList.remove('hidden');
             document.getElementById('adm-c').value = users[currentUser].coins;
             document.getElementById('adm-l').checked = users[currentUser].luck;
@@ -7666,12 +8150,29 @@
             document.getElementById('owner-admin-tools').style.display = ((currentUser || '').toLowerCase() === OWNER_USERNAME) ? 'block' : 'none';
             
             const sel = document.getElementById('adm-b-sel');
-            sel.innerHTML = '';
-            Object.values(DB.packs).forEach(p => p.b.forEach(b => {
-                const opt = document.createElement('option');
-                opt.value = b.n; opt.textContent = `${b.n} (${b.r})`;
-                sel.appendChild(opt);
-            }));
+            if (sel) {
+                sel.innerHTML = '';
+                const all = [];
+                Object.values(DB.packs).forEach(p => p.b.forEach(b => { if (b && b.n) all.push(b); }));
+                all.sort((a, b) => String(a.n).localeCompare(String(b.n)));
+                all.forEach(b => {
+                    const opt = document.createElement('option');
+                    opt.value = b.n;
+                    opt.textContent = `${b.n} (${b.r})`;
+                    sel.appendChild(opt);
+                });
+                sel.onchange = () => {
+                    const inp = document.getElementById('adm-b-name');
+                    if (inp) inp.value = sel.value || '';
+                };
+                const inp = document.getElementById('adm-b-name');
+                if (inp && sel.value && !inp.value.trim()) inp.value = sel.value;
+            }
+        }
+
+        // Logo is no longer an admin button; it just returns home.
+        document.querySelector('.logo').onclick = () => {
+            if (typeof switchView === 'function') switchView('v-m');
         };
         document.getElementById('adm-s').onclick = () => { users[currentUser].coins = parseInt(document.getElementById('adm-c').value); upC(); saveUsers(); };
         document.getElementById('adm-l').onchange = (e) => { users[currentUser].luck = e.target.checked; saveUsers(); };
@@ -7708,17 +8209,23 @@
             saveAdminUsers();
             saveBannedUsers();
             document.getElementById('adm-ban-name').value = '';
-            if (currentUser === name) document.getElementById('logout-btn').click();
-            alert(name + ' has been banned.');
+            if (currentUser === name) {
+                document.getElementById('banned-reason-text').textContent = 'Account banned by administrator';
+                document.getElementById('banned-overlay').classList.remove('hidden');
+            }
         };
         document.getElementById('adm-b-btn').onclick = () => {
-            const bName = document.getElementById('adm-b-name').value.trim();
+            const inputEl = document.getElementById('adm-b-name');
+            const selEl = document.getElementById('adm-b-sel');
+            const bName = String((inputEl && inputEl.value) || (selEl && selEl.value) || '').trim();
             if(bName) {
                 const meta = findBlookByName(bName);
                 if (!meta) return alert('Blook not found! Make sure the name is exact.');
+                if (!users[currentUser].inv || typeof users[currentUser].inv !== 'object') users[currentUser].inv = {};
                 users[currentUser].inv[bName] = (users[currentUser].inv[bName] || 0) + 1;
                 saveUsers();
                 if (!document.getElementById('v-b').classList.contains('hidden')) renderI();
+                if (inputEl) inputEl.value = '';
                 alert(`Spawned 1x ${bName}!`);
             } else {
                 alert('Please enter a blook name.');
@@ -7726,6 +8233,38 @@
         };
         document.getElementById('adm-cl').onclick = () => document.getElementById('admin-overlay').classList.add('hidden');
         document.getElementById('adm-logout').onclick = () => { document.getElementById('admin-overlay').classList.add('hidden'); document.getElementById('logout-btn').click(); };
+
+        // Full local reset (serverless mode)
+        function resetAllData() {
+            if (!confirm('Reset ALL local data?\n\nThis deletes accounts, coins, inventory, market, chat, clans, posts, bans, and login state for this site in this browser.')) return;
+            const keys = [
+                'blook_users',
+                'blook_global_market',
+                'blook_clans',
+                'blook_posts',
+                'blook_news',
+                'blook_global_chat',
+                'blook_online_presence',
+                'blook_admin_users',
+                'blook_banned_users',
+                'blook_global_luck_boost',
+                'blook_logged_user',
+                'bv2t_session_v1'
+            ];
+            keys.forEach(k => { try { localStorage.removeItem(k); } catch (_) {} });
+            location.reload();
+        }
+
+        function resetAllAccounts() {
+            if (!confirm('Reset ALL accounts?\n\nThis deletes ALL saved accounts and logs everyone out on this browser.')) return;
+            const keys = ['blook_users', 'blook_logged_user', 'bv2t_session_v1'];
+            keys.forEach(k => { try { localStorage.removeItem(k); } catch (_) {} });
+            location.reload();
+        }
+
+        // Expose for easy console use too
+        window.resetAllData = resetAllData;
+        window.resetAllAccounts = resetAllAccounts;
         function closeMainModal() {
             const ov = document.getElementById('modal-overlay');
             ov.classList.add('hidden');
@@ -7803,8 +8342,8 @@
                 globalChatMessages = globalChatMessages.filter(msg => !isBannedUser(msg.from));
                 saveChat();
                 if (currentUser && isBannedUser(currentUser)) {
-                    alert('Your account has been banned.');
-                    document.getElementById('logout-btn').click();
+                    document.getElementById('banned-reason-text').textContent = 'Account banned by administrator';
+                    document.getElementById('banned-overlay').classList.remove('hidden');
                 }
                 if (!document.getElementById('v-chat').classList.contains('hidden')) renderGlobalChat();
                 if (!document.getElementById('v-p').classList.contains('hidden')) renderP();
