@@ -5422,9 +5422,6 @@ function saveClans() {
                 window.partySync(serverKey, data[serverKey]);
             }
         }
-                };
-            } catch (_) {}
-        })();
 
         function globalLuckIsActive() {
             return !!(globalLuckBoost && globalLuckBoost.expiresAt && Date.now() < globalLuckBoost.expiresAt);
@@ -7196,6 +7193,9 @@ function saveClans() {
             const e = authEmailIn.value.trim();
             const p = authPassIn.value.trim();
             if(!u || !p) return alert("Fill all fields");
+            
+            console.log("Auth: trying", u, "signup:", isSignup);
+            
             try {
                 if(isSignup) {
                     await apiPost('/api/auth/signup', { username: rawU, email: e, password: p });
@@ -7207,6 +7207,7 @@ function saveClans() {
                     await login();
                 }
             } catch (err) {
+                console.error("Auth error:", err);
                 const msg = String(err && err.message ? err.message : err);
                 if (msg === 'username_taken') return alert('Username taken');
                 if (msg === 'banned') return alert('This account is banned.');
