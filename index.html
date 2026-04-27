@@ -5424,11 +5424,6 @@ function saveClans() {
         }
 
         function globalLuckIsActive() {
-                window.partySync(serverKey, data[serverKey]);
-            }
-        }
-
-        function globalLuckIsActive() {
             return !!(globalLuckBoost && globalLuckBoost.expiresAt && Date.now() < globalLuckBoost.expiresAt);
         }
 
